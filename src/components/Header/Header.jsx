@@ -39,7 +39,7 @@ const Header = () => {
           <div className="logo">
             <Link to={"/"} className="main-link">
               <h2 className="d-flex align-items-center gap-1">
-                <i class="ri-pantone-line"></i> Learners.
+                <i className="ri-pantone-line"></i> Learners.
               </h2>
             </Link>
           </div>
@@ -58,21 +58,20 @@ const Header = () => {
                       <button>Login</button>
                     </Link>
                   </div>
-                  {/* <button className="login__btn">Login</button> */}
                 </li>
               </ul>
             </div>
 
             {/* <div className="nav__right">
               <p className="mb-0 d-flex align-items-center gap-2">
-                <i class="ri-phone-line"></i> +88 0123456789
+                <i className="ri-phone-line"></i> +88 0123456789
               </p>
             </div> */}
           </div>
 
           <div className="mobile__menu">
             <span>
-              <i class="ri-menu-line" onClick={menuToggle}></i>
+              <i className="ri-menu-line" onClick={menuToggle}></i>
             </span>
           </div>
         </div>

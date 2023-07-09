@@ -1,5 +1,7 @@
 import client from "../../services/axiosInstance";
 
-export default function Login(){
+const API_ENDPOINT = "auth/login";
 
+export default function login(payload) {
+  return client.post(API_ENDPOINT, payload);
 }

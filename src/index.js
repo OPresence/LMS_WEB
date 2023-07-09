@@ -8,9 +8,13 @@ import "remixicon/fonts/remixicon.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// const AuthContext = React.createContext(null);
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <AuthContext.Provider> */}
+      <App />
+    {/* </AuthContext.Provider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
