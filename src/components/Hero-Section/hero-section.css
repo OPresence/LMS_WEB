@@ -1,0 +1,10 @@
+.hero__content h2 {
+  font-weight: 500;
+  line-height: 55px;
+  font-size: 48px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero__content {
+  padding-top: 80px;
+}

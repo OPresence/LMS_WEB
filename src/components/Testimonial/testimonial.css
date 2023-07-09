@@ -1,0 +1,12 @@
+.testimonial__content {
+  margin-left: 40px;
+}
+.testimonial__content h2 {
+  font-weight: 600;
+}
+
+@media all and (max-width: 767px) {
+  .testimonial__content {
+    margin-left: 0;
+  }
+}
