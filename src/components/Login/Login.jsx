@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link, useNavigate, redirect } from "react-router-dom";
 import login from "./helper";
 import GoogleLogo from "../../assests/images/google_logo.svg";
 
+import { AuthContext } from "../../authContext";
 import { saveToLocalStorage } from "../../utils";
 
 export default function Login() {
@@ -12,6 +13,7 @@ export default function Login() {
     error: false,
   });
   const navigate = useNavigate();
+  const { setIsLoggedIn } = useContext(AuthContext);
   const { email, password, error } = formData;
 
   const handleChange = (field) => (event) => {
@@ -19,18 +21,18 @@ export default function Login() {
     setFormData({ ...formData, [field]: value });
   };
 
-  const handleSubmit = () => {
-    const reqPayload = {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const payload = {
       email,
       password,
     };
-    login(reqPayload)
+    login(payload)
       .then((res) => {
         if (res?.data) {
           setFormData({ ...formData, error: false });
-          const payload = { authToken: res.data.authToken, isLoggedIn: true };
-          console.log({ payload }, res);
-          saveToLocalStorage("learners", payload);
+          saveToLocalStorage("authToken", res.data.authToken);
+          setIsLoggedIn(true);
           navigate("/");
         }
       })
@@ -42,7 +44,7 @@ export default function Login() {
       <div className="form-content">
         <header>Login</header>
         {error && <p>Invalid user</p>}
-        <form action="#">
+        <form onSubmit={handleSubmit}>
           <div className="field input-field">
             <input
               type="email"

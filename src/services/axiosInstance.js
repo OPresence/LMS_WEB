@@ -1,10 +1,14 @@
 import axios from "axios";
 
-const client = axios.create({
-  baseURL: "http://localhost:8000/api/",
-  headers: {
-    "content-type": "application/json",
-  },
-});
+const client = (apiHeaders = {}) => {
+  return axios.create({
+    baseURL: "http://localhost:8000/api/",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      ...apiHeaders,
+    },
+  });
+};
 
 export default client;
