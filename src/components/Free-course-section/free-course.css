@@ -8,6 +8,7 @@
 }
 
 .free__btn {
+  font-family: 'Nunito Sans', sans-serif;
   position: absolute;
   bottom: -20px;
   right: 20px;
@@ -21,6 +22,8 @@
 }
 
 .free__course__details h6 {
+  font-size: 18px;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
   line-height: 2rem;
 }

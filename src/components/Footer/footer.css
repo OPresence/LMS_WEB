@@ -1,5 +1,10 @@
 .footer {
-  background: rgba(226, 248, 248, 0.664);
+  background-color: rgba(226, 248, 248, 0.664);
+  padding-top: 50px;
+}
+
+.footer h6{
+  font-size: 24px;
 }
 
 .follows span a {
@@ -12,6 +17,7 @@
 
 .link__list .link__item {
   background: transparent;
+  font-size: 14px;
 }
 
 .link__list a {

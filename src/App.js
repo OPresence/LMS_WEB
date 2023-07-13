@@ -10,13 +10,18 @@ import {
   Outlet,
 } from "react-router-dom";
 import { AuthContext } from "./authContext";
+import "./app.css";
 
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
 import Logout from "./components/Logout/Logout";
-import Enrollments from "./pages/Enrollments/Enrollments";
+import Courses from "./pages/Courses";
+import CourseDetails from "./pages/CourseDetails";
+import NotFound from "./components/NotFound";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -32,18 +37,22 @@ function App() {
   return (
     <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
       <Router>
-          <Header />
-          <main className="main-container">
-            <Routes>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="/login" element={<Login />}></Route>
-              <Route path="/sign-up" element={<SignUp />}></Route>
-              <Route element={<PrivateRoute />}>
-                <Route path="/my-courses" element={<Enrollments />}></Route>
-                <Route path="/logout" element={<Logout />}></Route>
-              </Route>
-            </Routes>
-          </main>
+        <Header />
+        <main className="main-container">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/sign-up" element={<SignUp />}></Route>
+            <Route path="/courses" element={<Courses />}></Route>
+            <Route path="/courses/:title" element={<CourseDetails />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route element={<PrivateRoute />}>
+              <Route path="/logout" element={<Logout />}></Route>
+            </Route>
+            <Route path="*" element={<NotFound />}></Route>
+          </Routes>
+        </main>
+        <Footer />
       </Router>
     </AuthContext.Provider>
   );

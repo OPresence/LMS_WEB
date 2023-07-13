@@ -1,23 +1,28 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../authContext";
 
 import { saveToLocalStorage } from "../../utils";
-
-import GoogleLogo from "../../assests/images/google_logo.svg";
+import Gender from "./Gender";
 import register from "./helper";
 
 export default function SignUp() {
   const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-    mobile:'',
+    name: "shivamas110",
+    email: "shivam1asd21212213@gmail.com",
+    password: "shivam123",
+    confirmPassword: "shivam123",
+    mobile: "9087678984",
+    gender: "Male",
     error: false,
   });
+
+  const setGender = (value) => {
+    setUserData({ ...userData, ["gender"]: value });
+  };
+  const navigate = useNavigate();
   const { setIsLoggedIn } = useContext(AuthContext);
-  const { name, email, password, confirmPassword } = userData;
+  const { name, email, password, confirmPassword, mobile, gender } = userData;
 
   const handleChange = (field) => (event) => {
     const value = event.target.value;
@@ -26,14 +31,20 @@ export default function SignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (confirmPassword !== password) {
+      return;
+    }
     const payload = {
       email,
       password,
+      mobile,
+      gender,
+      name,
     };
     register(payload)
       .then((res) => {
-        if (res?.data) {
-          setUserData({ ...formData, error: false });
+        if (res?.status === 200) {
+          setUserData({ ...userData, error: false });
           saveToLocalStorage("authToken", res.data.authToken);
           setIsLoggedIn(true);
           navigate("/");
@@ -45,7 +56,7 @@ export default function SignUp() {
   return (
     <div className="form">
       <div className="form-content">
-        <header>Signup</header>
+        <header>Create your account</header>
         <form onSubmit={handleSubmit}>
           <div className="field input-field">
             <input
@@ -65,15 +76,22 @@ export default function SignUp() {
               onChange={handleChange("email")}
             />
           </div>
-          <div className="field input-field">
-            <input
-              type="text"
-              placeholder="Mobile"
-              className="input"
-              value={name}
-              onChange={handleChange("mobile")}
-            />
+
+          <div className="flex">
+            {/* <div className="field input-field w-auto">
+              <Gender gender={gender} setGender={setGender} />
+            </div> */}
+            <div className="field input-field">
+              <input
+                type="text"
+                placeholder="Mobile"
+                className="input"
+                value={mobile}
+                onChange={handleChange("mobile")}
+              />
+            </div>
           </div>
+
           <div className="field input-field">
             <input
               type="password"
@@ -106,13 +124,6 @@ export default function SignUp() {
           </span>
         </div>
       </div>
-      {/* <div className="line"></div>
-      <div className="media-options">
-        <a href="#" className="field google">
-          <img src={GoogleLogo} alt="Google Logo" className="google-img" />
-          <span>Login with Google</span>
-        </a>
-      </div> */}
     </div>
   );
 }

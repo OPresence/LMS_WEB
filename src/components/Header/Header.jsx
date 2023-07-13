@@ -1,5 +1,5 @@
 import React, { useRef, useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Container } from "reactstrap";
 import "./header.css";
 
@@ -10,13 +10,13 @@ const navLinks = [
     display: "Home",
     url: "/",
   },
+  // {
+  //   display: "About",
+  //   url: "#",
+  // },
   {
-    display: "About",
-    url: "#",
-  },
-  {
-    display: "All Courses",
-    url: "#",
+    display: "Courses",
+    url: "/courses",
   },
   // {
   //   display: "Pages",
@@ -39,11 +39,11 @@ const Header = () => {
       <Container className="header__container">
         <div className="navigation d-flex align-items-center justify-content-between">
           <div className="logo">
-            <Link to={"/"} className="main-link">
+            <NavLink to={"/"} className="main-link">
               <h2 className="d-flex align-items-center gap-1">
                 <i className="ri-pantone-line"></i> Learners.
               </h2>
-            </Link>
+            </NavLink>
           </div>
 
           <div className="nav d-flex align-items-center gap-5">
@@ -51,15 +51,28 @@ const Header = () => {
               <ul className="nav__list">
                 {navLinks.map((item, index) => (
                   <li key={index} className="nav__item">
-                    <Link to={item.url}>{item.display}</Link>
+                    <NavLink
+                      to={item.url}
+                      className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                      {item.display}
+                    </NavLink>
                   </li>
                 ))}
+                <li className="nav__item cart__icon">
+                  <NavLink to="/cart">
+                    <span className="cart__icon__wrapper">
+                      <i class="ri-shopping-cart-2-line"></i>
+                      <span className="cart__value">2</span>
+                    </span>
+                  </NavLink>
+                </li>
                 {!isLoggedIn && (
                   <li className="nav__item">
                     <div className="field button-field login__button">
-                      <Link to="/login">
+                      <NavLink className="login" to="/login">
                         <button>Login</button>
-                      </Link>
+                      </NavLink>
                     </div>
                   </li>
                 )}
@@ -67,13 +80,10 @@ const Header = () => {
                 {isLoggedIn && (
                   <>
                     <li className="nav__item">
-                      <Link to="/my-courses">My Enrollments</Link>
-                    </li>
-                    <li className="nav__item">
                       <div className="field button-field login__button">
-                        <Link to="/logout">
+                        <NavLink className="logout" to="/logout">
                           <button>Logout</button>
-                        </Link>
+                        </NavLink>
                       </div>
                     </li>
                   </>

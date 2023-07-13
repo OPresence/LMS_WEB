@@ -1,14 +1,14 @@
 .header {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   width: 100%;
   height: 60px;
-  /* line-height: 80px; */
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: #ffffff;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 }
 
 .main-link {
@@ -48,8 +48,28 @@
   font-weight: 400;
   font-size: 1rem;
   color: #0a2b1e;
+  padding: 0 10px;
   text-decoration: none;
-  transition: 0.3s;
+  /* transition: 0.3s; */
+  position: relative;
+}
+
+.nav__item a.active:not(.login, .logout) {
+  font-weight: 500;
+  color: #17bf9e;
+  /* background-color: #17bf9d29; */
+}
+
+.nav__item a.active:not(.login, .logout)::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #17bf9e;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .nav__item a:hover {
@@ -64,6 +84,12 @@
 
 .nav__right p i {
   font-size: 1.3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile__menu span i {
@@ -94,7 +120,38 @@
   justify-content: center;
   background-color: #17bf9e !important;
   color: #ffffff !important;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.cart__icon i {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.cart__icon__wrapper {
+  position: relative;
+}
+
+.cart__value {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #17bf9e;
+  /* font-family: sans-serif; */
+  font-size: 0.9rem;
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  right: -6px;
+  z-index: 3;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -120,7 +177,16 @@
     flex-direction: column;
     align-items: center;
     z-index: 999;
-    padding-top: 80px;
+    padding: 80px 20px 0 20px;
+  }
+
+  .nav__list > .nav__item:not(:last-child) {
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .nav__item {
+    height: auto;
+    width: 100%;
   }
 
   .mobile__menu {

@@ -1,0 +1,28 @@
+.radio__wrapper {
+  background-color: #ffffff;
+  /* border: 1px solid#CACACA !important; */
+  border-radius: 6px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.field .radio {
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  outline: none !important;
+  padding: 13px 15px !important;
+  color: #232836 !important;
+  background-color: transparent !important;
+}
+
+.field .radio:first-child{
+    border-right: 1px solid #cacaca71;
+}
+
+.field .radio:focus {
+  border-bottom-width: 2px !important;
+}
+
+
+.field .radio.active{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px !important;
+}
