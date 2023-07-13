@@ -1,32 +1,36 @@
-import React from "react";
-import { Container } from "reactstrap";
+import React,{useEffect} from "react";
 
 import Styles from "./cart.module.css";
 import CartItems from "./CartItems";
 import coursesData from "../../assests/courses.json";
 
 export default function Cart() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="section section-padding">
       <div className="container">
         <div className="row justify-content-between">
           <div className="col-xl-7 col-lg-8">
             <h2 className={Styles.header}>Shopping Cart</h2>
-            <p>2 Courses in Cart</p>
+            <p>3 Courses in Cart</p>
             <div className={Styles.itemContainer}>
-            {React.Children.toArray(
-              coursesData.map((item) => (
-                // <Col lg="4" md="6" sm="6">
-                <CartItems key={item.id} item={item} />
-                // </Col>
-              ))
-            )}
+              {React.Children.toArray(
+                coursesData.map((item) => (
+                  // <Col lg="4" md="6" sm="6">
+                  <CartItems key={item.id} item={item} />
+                  // </Col>
+                ))
+              )}
             </div>
           </div>
           <div className="col-lg-4">
             <div className="sidebar-details-wrap">
               <div className="sidebar-details-video-description">
-                <div className="sidebar-video">
+                {/* <div className="sidebar-video">
                   <img
                     src="assets/images/courses/sidebar-video.jpg"
                     alt="video"
@@ -37,19 +41,12 @@ export default function Cart() {
                   >
                     <i className="fa fa-play"></i>
                   </a>
-                </div>
+                </div> */}
                 <div className="sidebar-description">
-                  <div className="price-wrap">
-                    <span className="label">Price :</span>
-                    <div className="price">
-                      <span className="sale-price">$49.99</span>
-                      <span className="regular-price">$102</span>
-                    </div>
-                  </div>
                   <ul className="description-list">
                     <li>
-                      <i className="flaticon-wall-clock"></i> Duration{" "}
-                      <span>52 mins</span>
+                      <i className="flaticon-wall-clock"></i> Total Courses
+                      <span>3</span>
                     </li>
                     <li>
                       <i className="fas fa-sliders-h"></i> Level{" "}
@@ -68,6 +65,14 @@ export default function Cart() {
                       <span>4 Enrolled</span>
                     </li>
                   </ul>
+                  <div className="price-wrap">
+                    <span className="label">Total Price :</span>
+                    <div className="price">
+                      <span className="sale-price">$49.99</span>
+                      <span className="regular-price">$102</span>
+                    </div>
+                  </div>
+                  <br/>
                   <div className="field button-field login__button w-100">
                     <button style={{ padding: "10px" }}>Add To Cart</button>
                   </div>

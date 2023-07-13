@@ -63,7 +63,7 @@ const Header = () => {
                   <NavLink to="/cart">
                     <span className="cart__icon__wrapper">
                       <i class="ri-shopping-cart-2-line"></i>
-                      <span className="cart__value">2</span>
+                      <span className="cart__value">3</span>
                     </span>
                   </NavLink>
                 </li>

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useEffect,Fragment } from "react";
 import HeroSection from "../components/Hero-Section/HeroSection";
 import CompanySection from "../components/Company-section/Company";
 
@@ -11,9 +11,12 @@ import FreeCourse from "../components/Free-course-section/FreeCourse";
 import Testimonials from "../components/Testimonial/Testimonials";
 
 import Newsletter from "../components/Newsletter/Newsletter";
-import Footer from "../components/Footer/Footer";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <Fragment>
       <HeroSection />

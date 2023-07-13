@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Container, Row, Col } from "reactstrap";
 
 import CourseCard from "../components/Courses-section/CourseCard";
@@ -39,6 +39,11 @@ const coursesData = [
   
 
 export default function Courses() {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <section style={{ marginTop: '30px' }}>
       <Container>

@@ -17,6 +17,34 @@
   width: 200px;
 }
 
+.course__details.cart__course h6,
+.course__details.cart__course p {
+  margin: 0;
+}
+
+.course__details.cart__course .amount {
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.course__details.cart__course h6 {
+  line-height: 1.5;
+}
+
+@media all and (max-width: 767px) {
+  .course__img.course__img__wrapper {
+    width: 100%;
+  }
+  .course__details.cart__course {
+    width: 100% !important;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .course__img img {
   border-radius: 5px;
   margin-bottom: 20px;

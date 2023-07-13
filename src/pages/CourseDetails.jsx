@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import CourseDetailBanner from "../components/CourseDetailBanner";
 import Accordion from "../components/Accordion";
 import CourseInstructor from "../components/CourseInstructor";
@@ -6,6 +6,11 @@ import Review from "../components/Review";
 import SidebarDetail from "../components/SidebarDetail";
 
 export default function CourseDetails() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div>
       <CourseDetailBanner />
