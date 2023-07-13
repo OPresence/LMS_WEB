@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { Link, useNavigate, redirect } from "react-router-dom";
 import login from "./helper";
 import { Toast, ToastHeader, ToastBody } from "reactstrap";
-import GoogleLogo from "../../assests/images/google_logo.svg";
 
 import { AuthContext } from "../../authContext";
 import { saveToLocalStorage } from "../../utils";
@@ -49,7 +48,7 @@ export default function Login() {
       <div className="form login">
         <div className="form-content">
           <header style={{ lineHeight: "10px", fontSize: "1.3rem" }}>
-            Login into your account
+          Log in to your personal account
           </header>
           <div className="form-link">
             <span>
@@ -62,6 +61,20 @@ export default function Login() {
           {error && <p>Invalid user</p>}
           <form onSubmit={handleSubmit}>
             <div className="field input-field">
+              <div
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 400,
+                  width: "40px",
+                  padding: "0 5px 0 10px",
+                }}
+              >
+                <i
+                  class="fa-solid fa-envelope"
+                  style={{ color: "#7086ff" }}
+                ></i>
+              </div>
+
               <input
                 type="email"
                 value={email}
@@ -71,6 +84,16 @@ export default function Login() {
               />
             </div>
             <div className="field input-field">
+              <div
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 400,
+                  width: "40px",
+                  padding: "0 5px 0 10px",
+                }}
+              >
+                <i class="fa-solid fa-lock" style={{ color: "#7086ff" }}></i>
+              </div>
               <input
                 type="password"
                 value={password}

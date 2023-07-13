@@ -54,7 +54,7 @@ button.btn.remove {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-button.btn.remove:hover{
+button.btn.remove:hover {
   background: #7f81fe;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -124,6 +124,11 @@ form {
   width: 100%;
   margin-top: 20px;
   border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .field input,
 .field .radio,
@@ -138,11 +143,11 @@ form {
 .field input {
   outline: none;
   padding: 0 15px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
 }
-.field input:focus,
-.field input:hover {
+
+.field:hover {
   transition: all 0.2s ease-in;
   border-bottom-width: 2px;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
@@ -187,6 +192,10 @@ form {
 
 .form-content {
   width: 100%;
+}
+
+.form-content header{
+  line-height: 1;
 }
 
 .form-content a:hover {
