@@ -28,19 +28,19 @@ export default function index(props) {
               <ul className="lessons-list">
                 <li>
                   <a href="">
-                    <i className="fa fa-play-circle"></i> Greetings and
+                    <i className="fas fa-play-circle"></i> Greetings and
                     Introductions <span>5:00</span>
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <i className="fa fa-play-circle"></i> 5 Business English
+                    <i className="fas fa-play-circle"></i> 5 Business English
                     Phrasal Verbs <span>3:17</span>
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <i className="fa fa-question-circle"></i> Quizz 1 : How to
+                    <i className="fas fa-question-circle"></i> Quizz 1 : How to
                     start?
                   </a>
                 </li>
@@ -57,19 +57,19 @@ export default function index(props) {
               <ul className="lessons-list">
                 <li>
                   <a href="">
-                    <i className="fa fa-play-circle"></i> Greetings and
+                    <i className="fas fa-play-circle"></i> Greetings and
                     Introductions <span>5:00</span>
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <i className="fa fa-play-circle"></i> 5 Business English
+                    <i className="fas fa-play-circle"></i> 5 Business English
                     Phrasal Verbs <span>3:17</span>
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <i className="fa fa-question-circle"></i> Quizz 1 : How to
+                    <i className="fas fa-question-circle"></i> Quizz 1 : How to
                     start?
                   </a>
                 </li>
@@ -86,19 +86,19 @@ export default function index(props) {
               <ul className="lessons-list">
                 <li>
                   <a href="">
-                    <i className="fa fa-play-circle"></i> Greetings and
+                    <i className="fas fa-play-circle"></i> Greetings and
                     Introductions <span>5:00</span>
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <i className="fa fa-play-circle"></i> 5 Business English
+                    <i className="fas fa-play-circle"></i> 5 Business English
                     Phrasal Verbs <span>3:17</span>
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <i className="fa fa-question-circle"></i> Quizz 1 : How to
+                    <i className="fas fa-question-circle"></i> Quizz 1 : How to
                     start?
                   </a>
                 </li>

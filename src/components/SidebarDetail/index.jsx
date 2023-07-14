@@ -1,4 +1,5 @@
 import React from "react";
+import sidebarVideoImg from "../../assests/images/graphics-design.png";
 
 export default function SidebarDetail() {
   return (
@@ -6,9 +7,9 @@ export default function SidebarDetail() {
       <div className="sidebar-details-wrap">
         <div className="sidebar-details-video-description">
           <div className="sidebar-video">
-            <img src="assets/images/courses/sidebar-video.jpg" alt="video" />
+            <img src={sidebarVideoImg} alt="video" />
             <a
-              href="https://www.youtube-nocookie.com/embed/Ga6RYejo6Hk"
+              href="https://www.youtube.com/watch?v=OAZWXUkrjPc"
               className="popup-video play"
             >
               <i className="fas fa-play"></i>
