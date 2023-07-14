@@ -20,10 +20,10 @@ export default function CourseInstructor() {
               <span>(4.6)</span>
             </div>
             <span className="meta-action">
-              <i className="fa fa-play-circle"></i> 10 Tutorials
+              <i className="fas fa-play-circle"></i> 10 Tutorials
             </span>
             <span className="meta-action">
-              <i className="far fa-user"></i> 134 Students
+              <i className="fas fa-user"></i> 134 Students
             </span>
           </div>
 

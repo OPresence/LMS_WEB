@@ -11,7 +11,7 @@ export default function SidebarDetail() {
               href="https://www.youtube-nocookie.com/embed/Ga6RYejo6Hk"
               className="popup-video play"
             >
-              <i className="fa fa-play"></i>
+              <i className="fas fa-play"></i>
             </a>
           </div>
           <div className="sidebar-description">

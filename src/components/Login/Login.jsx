@@ -48,7 +48,7 @@ export default function Login() {
       <div className="form login">
         <div className="form-content">
           <header style={{ lineHeight: "10px", fontSize: "1.3rem" }}>
-          Log in to your personal account
+            Log in to your personal account
           </header>
           <div className="form-link">
             <span>
@@ -71,7 +71,7 @@ export default function Login() {
               >
                 <i
                   class="fa-solid fa-envelope"
-                  style={{ color: "#7086ff" }}
+                  style={{ color: "#6d5eff" }}
                 ></i>
               </div>
 
@@ -92,7 +92,7 @@ export default function Login() {
                   padding: "0 5px 0 10px",
                 }}
               >
-                <i class="fa-solid fa-lock" style={{ color: "#7086ff" }}></i>
+                <i class="fa-solid fa-lock" style={{ color: "#6d5eff" }}></i>
               </div>
               <input
                 type="password"
@@ -112,14 +112,14 @@ export default function Login() {
               <button onClick={handleSubmit}>Login</button>
             </div>
           </form>
-          <div className="form-link">
+          {/* <div className="form-link">
             <span>
               Don't have an account?{" "}
               <Link to="/sign-up" className="link signup-link">
                 Signup
               </Link>
             </span>
-          </div>
+          </div> */}
         </div>
         {/* <div className="line"></div> */}
         {/* <div className="media-options">

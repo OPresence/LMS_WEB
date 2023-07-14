@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const CourseCard = (props) => {
   const { imgUrl, title, lesson, students, rating } = props.item;
-  console.log({imgUrl})
   return (
     <div className="single__course__item">
       <div className="course__img">

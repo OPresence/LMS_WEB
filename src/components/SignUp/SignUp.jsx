@@ -54,58 +54,35 @@ export default function SignUp() {
   };
 
   return (
-    <div className="form">
-      <div className="form-content">
-        <div style={{ textAlign: "center" }}>
-          <header>Join our community</header>
-          <div className="form-link" style={{marginTop:0}}>
-            <span>Register your account now!</span>
-          </div>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <div className="field input-field">
-            <div
-              style={{
-                fontSize: "20px",
-                fontWeight: 400,
-                width: "40px",
-                padding: "0 5px 0 10px",
-              }}
-            >
-              <i class="fa-solid fa-user" style={{ color: "#7086ff" }}></i>
+    <div style={{ minHeight: "100vh", width: "100%", background: "#f0f8ff" }}>
+      <div className="form">
+        <div className="form-content">
+          <div style={{ textAlign: "center" }}>
+            <header>Join our community</header>
+            <div className="form-link" style={{ marginTop: 0 }}>
+              <span>Register your account now!</span>
             </div>
-            <input
-              type="text"
-              placeholder="Name"
-              className="input"
-              value={name}
-              onChange={handleChange("name")}
-            />
           </div>
-          <div className="field input-field">
-            <div
-              style={{
-                fontSize: "20px",
-                fontWeight: 400,
-                width: "40px",
-                padding: "0 5px 0 10px",
-              }}
-            >
-              <i class="fa-solid fa-envelope" style={{ color: "#7086ff" }}></i>
+          <form onSubmit={handleSubmit}>
+            <div className="field input-field">
+              <div
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 400,
+                  width: "40px",
+                  padding: "0 5px 0 10px",
+                }}
+              >
+                <i class="fa-solid fa-user" style={{ color: "#6d5eff" }}></i>
+              </div>
+              <input
+                type="text"
+                placeholder="Name"
+                className="input"
+                value={name}
+                onChange={handleChange("name")}
+              />
             </div>
-            <input
-              type="email"
-              placeholder="Email"
-              className="input"
-              value={email}
-              onChange={handleChange("email")}
-            />
-          </div>
-
-          <div className="flex">
-            {/* <div className="field input-field w-auto">
-              <Gender gender={gender} setGender={setGender} />
-            </div> */}
             <div className="field input-field">
               <div
                 style={{
@@ -116,72 +93,100 @@ export default function SignUp() {
                 }}
               >
                 <i
-                  class="fa-solid fa-mobile-screen-button"
-                  style={{ color: "#7086ff" }}
+                  class="fa-solid fa-envelope"
+                  style={{ color: "#6d5eff" }}
                 ></i>
               </div>
               <input
-                type="text"
-                placeholder="Mobile"
+                type="email"
+                placeholder="Email"
                 className="input"
-                value={mobile}
-                onChange={handleChange("mobile")}
+                value={email}
+                onChange={handleChange("email")}
               />
             </div>
-          </div>
 
-          <div className="field input-field">
-            <div
-              style={{
-                fontSize: "20px",
-                fontWeight: 400,
-                width: "40px",
-                padding: "0 5px 0 10px",
-              }}
-            >
-              <i class="fa-solid fa-lock" style={{ color: "#7086ff" }}></i>
+            <div className="flex">
+              {/* <div className="field input-field w-auto">
+              <Gender gender={gender} setGender={setGender} />
+            </div> */}
+              <div className="field input-field">
+                <div
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: 400,
+                    width: "40px",
+                    padding: "0 5px 0 10px",
+                  }}
+                >
+                  <i
+                    class="fa-solid fa-mobile-screen-button"
+                    style={{ color: "#6d5eff" }}
+                  ></i>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Mobile"
+                  className="input"
+                  value={mobile}
+                  onChange={handleChange("mobile")}
+                />
+              </div>
             </div>
 
-            <input
-              type="password"
-              placeholder="Create password"
-              className="password"
-              value={password}
-              onChange={handleChange("password")}
-            />
-          </div>
-          <div className="field input-field">
-            <div
-              style={{
-                fontSize: "20px",
-                fontWeight: 400,
-                width: "40px",
-                padding: "0 5px 0 10px",
-              }}
-            >
-              <i class="fa-solid fa-lock" style={{ color: "#7086ff" }}></i>
-            </div>
-            <input
-              type="password"
-              placeholder="Confirm password"
-              className="password"
-              value={confirmPassword}
-              onChange={handleChange("confirmPassword")}
-            />
-            <i className="bx bx-hide eye-icon"></i>
-          </div>
+            <div className="field input-field">
+              <div
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 400,
+                  width: "40px",
+                  padding: "0 5px 0 10px",
+                }}
+              >
+                <i class="fa-solid fa-lock" style={{ color: "#6d5eff" }}></i>
+              </div>
 
-          <div className="field button-field">
-            <button>Signup</button>
+              <input
+                type="password"
+                placeholder="Create password"
+                className="password"
+                value={password}
+                onChange={handleChange("password")}
+              />
+            </div>
+            <div className="field input-field">
+              <div
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 400,
+                  width: "40px",
+                  padding: "0 5px 0 10px",
+                }}
+              >
+                <i class="fa-solid fa-lock" style={{ color: "#6d5eff" }}></i>
+              </div>
+              <input
+                type="password"
+                placeholder="Confirm password"
+                className="password"
+                value={confirmPassword}
+                onChange={handleChange("confirmPassword")}
+              />
+              <i className="bx bx-hide eye-icon"></i>
+            </div>
+
+            <div className="field button-field">
+              <button>Signup</button>
+            </div>
+          </form>
+          <div className="form-link">
+            <span>
+              Already have an account?{" "}
+              <Link to="/login" className="link login-link">
+                Login
+              </Link>
+            </span>
           </div>
-        </form>
-        <div className="form-link">
-          <span>
-            Already have an account?{" "}
-            <Link to="/login" className="link login-link">
-              Login
-            </Link>
-          </span>
         </div>
       </div>
     </div>

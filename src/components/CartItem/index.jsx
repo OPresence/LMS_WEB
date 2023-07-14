@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import imgUrl from "../../assests/images/web-development.png";
 
-export default function CartItems(props) {
+export default function CartItem(props) {
   const { title, lesson: instructor, students, rating } = props.item;
   return (
     <div className="flex w-100">
@@ -33,8 +33,12 @@ export default function CartItems(props) {
             </p>
           </div>
 
-          <p className="enroll d-flex align-items-center gap-1">
-            <button className="btn remove"> Remove</button>
+          <p className="enroll d-flex align-items-center gap-1 danger" style={{ cursor: "pointer" }}>
+            <i
+              className="fas fa-xmark"
+              style={{ color: "red"}}
+            ></i>
+            <span> Remove</span>
           </p>
         </div>
       </div>
