@@ -5,7 +5,6 @@ import {
   Route,
   useLocation,
   useNavigate,
-  Navigate,
   redirect,
   Outlet,
 } from "react-router-dom";
@@ -22,6 +21,8 @@ import Courses from "./pages/Courses";
 import CourseDetails from "./pages/CourseDetails";
 import NotFound from "./components/NotFound";
 import Cart from "./pages/Cart/Cart";
+import Payment from "./components/Payment";
+import Profile from "./components/Profile";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -40,16 +41,18 @@ function App() {
         <Header />
         <main className="main-container">
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/sign-up" element={<SignUp />}></Route>
-            <Route path="/courses" element={<Courses />}></Route>
-            <Route path="/courses/:title" element={<CourseDetails />}></Route>
-            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/:title" element={<CourseDetails />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/profile" element={<Profile />} />
             <Route element={<PrivateRoute />}>
-              <Route path="/logout" element={<Logout />}></Route>
+              <Route path="/logout" element={<Logout />} />
             </Route>
-            <Route path="*" element={<NotFound />}></Route>
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
@@ -75,7 +78,7 @@ const PrivateRoute = () => {
   }, [location.pathname]);
 
   if (!isLoggedIn) {
-    redirect("/");
+    navigate("/");
   }
 
   return <Outlet />;

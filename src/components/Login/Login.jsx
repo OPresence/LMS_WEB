@@ -47,7 +47,7 @@ export default function Login() {
       </Toast>
       <div className="form login">
         <div className="form-content">
-          <header style={{ lineHeight: "10px", fontSize: "1.3rem" }}>
+          <header style={{ lineHeight: 1}}>
             Log in to your personal account
           </header>
           <div className="form-link">

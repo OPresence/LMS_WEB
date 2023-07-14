@@ -58,8 +58,8 @@ export default function SignUp() {
       <div className="form">
         <div className="form-content">
           <div style={{ textAlign: "center" }}>
-            <header>Join our community</header>
-            <div className="form-link" style={{ marginTop: 0 }}>
+            <header style={{ lineHeight: 1}}>Join our community</header>
+            <div className="form-link" >
               <span>Register your account now!</span>
             </div>
           </div>

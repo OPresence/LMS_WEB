@@ -27,7 +27,7 @@ const Home = () => {
       <Features />
       <FreeCourse />
       <Testimonials />
-      <Newsletter />
+      {/* <Newsletter /> */}
       {/* <Footer /> */}
     </Fragment>
   );

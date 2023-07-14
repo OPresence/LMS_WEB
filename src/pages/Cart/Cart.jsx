@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Styles from "./cart.module.css";
 import CartItems from "../../components/CartItem";
@@ -9,6 +10,8 @@ import Shape3 from "../../assests/shape/shape-3.png";
 import Shape2 from "../../assests/shape/shape-2.png";
 
 export default function Cart() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -107,7 +110,10 @@ export default function Cart() {
                     </div>
                     <br />
                     <div className="field button-field login__button w-100">
-                      <button style={{ padding: "10px" }}>
+                      <button
+                        style={{ padding: "10px" }}
+                        onClick={()=>navigate("/payment")}
+                      >
                         Proceed To Pay
                       </button>
                     </div>

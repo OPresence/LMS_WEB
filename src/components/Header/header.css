@@ -101,6 +101,76 @@
   display: none;
 }
 
+.user__menu {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #17bf9e;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  /* position: relative; */
+}
+
+.user__menu i.fa-user {
+  font-size: 1rem;
+}
+
+.user__menu:hover {
+  background-color: #17bf9e;
+  border: 1px solid #17bf9e !important;
+}
+
+.user__menu:hover i.fa-user {
+  color: #fff;
+}
+
+.user__menu__list {
+  width: 120px;
+  background-color: #fff;
+  position: absolute;
+  top: 55px;
+  right: 0;
+  padding: 0 !important;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.user__menu__list li {
+  width: 100%;
+  height: 45px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.user__menu__list li a {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.user__menu__list li a span{
+  margin-right: 5px;
+}
+
+.user__menu__list li:not(:last-child) {
+  border-bottom: 1px solid #17bf9e;
+}
+
+.user__menu__list li:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all 0.3s ease;
+}
+
 .login__button {
   width: 100px;
   height: 60%;
@@ -142,7 +212,6 @@
   border-radius: 50%;
   color: #fff;
   background-color: #17bf9e;
-  /* font-family: sans-serif; */
   font-size: 0.9rem;
   font-weight: bold;
   position: absolute;
@@ -151,6 +220,15 @@
   z-index: 3;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -186,6 +264,9 @@
   .nav__item {
     height: auto;
     width: 100%;
+  }
+  .nav__item span{
+    margin-right: 10px;
   }
 
   .mobile__menu {

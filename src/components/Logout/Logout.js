@@ -8,11 +8,11 @@ import { removeFromLocalStorage } from "../../utils";
 export default function Logout() {
   const { setIsLoggedIn } = useContext(AuthContext);
   const navigate = useNavigate();
-  console.log("logout");
+
   useEffect(() => {
     logout()
       .then((res) => {
-          removeFromLocalStorage('authToken')
+        removeFromLocalStorage("authToken");
         setIsLoggedIn(false);
         navigate("/");
       })
