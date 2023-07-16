@@ -1,19 +1,28 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import CourseDetailBanner from "../components/CourseDetailBanner";
 import Accordion from "../components/Accordion";
 import CourseInstructor from "../components/CourseInstructor";
 import Review from "../components/Review";
 import SidebarDetail from "../components/SidebarDetail";
+import { useParams } from "react-router-dom";
+
+import courses from "../assests/courses";
 
 export default function CourseDetails() {
+  const { id } = useParams();
+
+  // const course = courses.filter((course) => course.id === id)[0];
+  const course = courses[0];
+
+  console.log({course});
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
-      <CourseDetailBanner />
+      <CourseDetailBanner course={course} />
       <div className="section section-padding">
         <div className="container">
           <div className="row justify-content-between">
@@ -52,11 +61,11 @@ export default function CourseDetails() {
 
                   <Accordion />
                 </div>
-                <CourseInstructor />
+                <CourseInstructor course={course}/>
                 <Review />
               </div>
             </div>
-            <SidebarDetail />
+            <SidebarDetail course={course} />
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import Styles from "./cart.module.css";
 import CartItems from "../../components/CartItem";
-import coursesData from "../../assests/courses.json";
+import coursesData from "../../assests/courses";
 import Shape7 from "../../assests/shape/shape-7.png";
 import Shape6 from "../../assests/shape/shape-6.png";
 import Shape3 from "../../assests/shape/shape-3.png";

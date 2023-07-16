@@ -15,15 +15,53 @@ const ChooseUs = () => {
           <Col lg="6" md="6">
             <div className="choose__content">
               <h2>Why Choose Us</h2>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt mollitia nostrum harum eos praesentium odit a sed quod
-                aut fugit. Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Reprehenderit omnis, culpa eligendi inventore perspiciatis
-                minus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolores cupiditate facilis provident quidem accusamus impedit
-                tenetur laboriosam debitis nisi eius!
-              </p>
+              <p>SALIENT FEATURES OF OUR LEARNING PROGRAMS</p>
+              {/* <h3 className="title">What you will learn</h3> */}
+              <ul className="choose__content_list">
+                <li className="flex">
+                  <span>
+                    <i class="fa-solid fa-circle"></i>
+                  </span>{" "}
+                  60 live sessions linked to real time scenarios of the market
+                </li>
+                <li className="flex">
+                  <span>
+                    <i class="fa-solid fa-circle"></i>
+                  </span>
+                  Live trading with Mentors
+                </li>
+                <li className="flex">
+                  <span>
+                    <i class="fa-solid fa-circle"></i>
+                  </span>
+                  Practical sessions to learn different tools & trading setups
+                </li>
+                <li className="flex">
+                  <span>
+                    <i class="fa-solid fa-circle"></i>
+                  </span>
+                  Live assistance by professional traders who have an experience
+                  of more than 7 years in the market
+                </li>
+                <li className="flex">
+                  <span>
+                    <i class="fa-solid fa-circle"></i>
+                  </span>
+                  Doubt solving sessions by our experts
+                </li>
+                <li className="flex">
+                  <span>
+                    <i class="fa-solid fa-circle"></i>
+                  </span>
+                  Proprietary Strategies
+                </li>
+                <li className="flex">
+                  <span>
+                    <i class="fa-solid fa-circle"></i>
+                  </span>
+                  24/7 support by our team
+                </li>
+              </ul>
             </div>
           </Col>
 

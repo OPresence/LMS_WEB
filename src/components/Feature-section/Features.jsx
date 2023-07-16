@@ -4,41 +4,40 @@ import "./features.css";
 
 const FeatureData = [
   {
-    title: "Quick Learning",
+    title: "PERSONAL TRADES TAKEN BY MENTORS",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
-    icon: "ri-draft-line",
+    icon: "fa-solid fa-users",
   },
 
   {
-    title: "All Time Support",
+    title: "LIVE MARKET SETUPS & DISCUSSIONS",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
-    icon: "ri-discuss-line",
+    icon: "fa-solid fa-users-gear",
   },
-
   {
-    title: "Certification",
+    title: "PREMIUM MEMBERSHIP ACCESS FOR THE DURATION OF COURSE",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
-    icon: "ri-contacts-book-line",
+    icon: "fa-solid fa-award",
   },
 ];
 
 const Features = () => {
   return (
-    <section>
+    <section className="features__section">
       <Container>
-        <Row>
+        <div className="wrapper">
           {FeatureData.map((item, index) => (
-            <Col lg="4" md="6" key={index}>
+            <Col lg="3" md="6" key={index}>
               <div className="single__feature text-center px-4">
                 <h2 className="mb-3">
                   <i className={item.icon}></i>
                 </h2>
                 <h6>{item.title}</h6>
-                <p>{item.desc}</p>
+                {/* <p>{item.desc}</p> */}
               </div>
             </Col>
           ))}
-        </Row>
+        </div>
       </Container>
     </section>
   );

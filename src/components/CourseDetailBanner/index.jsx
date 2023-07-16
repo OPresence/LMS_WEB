@@ -2,16 +2,15 @@ import React from "react";
 import Shape7 from "../../assests/shape/shape-7.png";
 import Shape1 from "../../assests/shape/shape-1.png";
 
-export default function CourseDetailBanner() {
+export default function CourseDetailBanner({ course = {} }) {
   return (
     <div
       className="section page-banner-section"
       style={{
         background: "linear-gradient(to right, #11998e80, #38ef7d8c)",
-        minHeight: "300px",
+        minHeight: "350px",
         paddingTop: 0,
       }}
-      // style="background-image: url(assets/images/bg/page-banner.jpg);"
     >
       <div className="shape-1">
         <img src={Shape7} alt="" />
@@ -23,12 +22,11 @@ export default function CourseDetailBanner() {
       <div className="container">
         <div className="course-details-banner-content">
           <h2 className="title" style={{ fontSize: "40px" }}>
-            Getting Started with the Linux Command Line{" "}
+            {course?.title || ""}
           </h2>
 
           <p className="text" style={{ fontSize: "16px" }}>
-            Learn Python like a Professional Start from the basics and go all
-            the way to creating your own applications and games
+            {course?.description || ""}
           </p>
 
           <div className="course-details-meta">
@@ -37,7 +35,7 @@ export default function CourseDetailBanner() {
                 <img src="assets/images/author-3.jpg" alt="Author" />
               </div>
               <div className="meta-name">
-                <p className="name">Adam Helen</p>
+                <p className="name">{course?.instructor?.name || ""}</p>
               </div>
             </div>
 
@@ -51,7 +49,7 @@ export default function CourseDetailBanner() {
                 <div className="rating-star">
                   <div className="rating-active"></div>
                 </div>
-                <span>(4.5)</span>
+                <span>({course?.rating || ""})</span>
               </div>
             </div>
           </div>

@@ -1,34 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CourseCard = (props) => {
-  const { imgUrl, title, lesson, students, rating } = props.item;
+const CourseCard = ({ course }) => {
+  console.log({course})
+  const imgPath =
+    require(`../../assests/images/${course.imgUrl}`).default;
   return (
     <div className="single__course__item">
       <div className="course__img">
-        <img src={imgUrl} alt="" className="w-100" />
+        <img src={imgPath} alt="" className="w-100" />
       </div>
 
       <div className="course__details">
-        <h6 className="course__title mb-4">{title}</h6>
-
+        <h6 className="course__title mb-4">{course.title}</h6>
+        <span>
+          Instructor: <strong>{course.instructor.name}</strong>
+        </span>
         <div className=" d-flex justify-content-between align-items-center">
           <p className="lesson d-flex align-items-center gap-1">
-            <i className="ri-book-open-line"></i> {lesson} Lessons
+            <i className="ri-book-open-line"></i> {course.lesson} Lessons
           </p>
 
           <p className="students d-flex align-items-center gap-1">
-            <i className="ri-user-line"></i> {students}K
+            <i className="ri-user-line"></i> {course.students}K
           </p>
         </div>
 
         <div className=" d-flex justify-content-between align-items-center">
           <p className="rating d-flex align-items-center gap-1">
-            <i className="ri-star-fill"></i> {rating}K
+            <i className="ri-star-fill"></i> {course.rating}K
           </p>
 
           <p className="enroll d-flex align-items-center gap-1">
-            <Link to={`/courses/${title.toString()}`}> View Course</Link>
+            <Link to={`/courses/${course.id}`}> View Course</Link>
           </p>
         </div>
       </div>

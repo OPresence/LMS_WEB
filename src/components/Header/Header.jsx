@@ -18,10 +18,10 @@ const navLinks = [
     display: "Courses",
     url: "/courses",
   },
-  // {
-  //   display: "Pages",
-  //   url: "#",
-  // },
+  {
+    display: "Contact",
+    url: "/contact",
+  },
   // {
   //   display: "Blog",
   //   url: "#",

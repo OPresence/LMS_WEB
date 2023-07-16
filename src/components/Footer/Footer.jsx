@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { Link } from "react-router-dom";
 
-
 import "./footer.css";
 
 const footerQuickLinks = [
@@ -12,38 +11,30 @@ const footerQuickLinks = [
   },
   {
     display: "About US",
-    url: "#",
+    url: "/about",
   },
-
+  {
+    display: "Contact US",
+    url: "/contact",
+  },
   {
     display: "Courses",
     url: "/courses",
-  },
-
-  {
-    display: "Blog",
-    url: "#",
   },
 ];
 
 const footerInfoLinks = [
   {
     display: "Privacy Policy",
-    url: "#",
+    url: "/privacy-policy",
   },
   {
-    display: "Membership",
-    url: "#",
+    display: "Refund Policy",
+    url: "/refund-policy",
   },
-
-  {
-    display: "Purchases Guide",
-    url: "#",
-  },
-
   {
     display: "Terms of Service",
-    url: "#",
+    url: "/terms-and-condition",
   },
 ];
 

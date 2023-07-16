@@ -10,6 +10,16 @@
   font-weight: 600;
 }
 
+.choose__content_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choose__content_list > li > span > i.fa-circle {
+  font-size: 10px;
+}
+
 .choose__img {
   position: relative;
   top: 0;

@@ -23,6 +23,12 @@ import NotFound from "./components/NotFound";
 import Cart from "./pages/Cart/Cart";
 import Payment from "./components/Payment";
 import Profile from "./components/Profile";
+import Contact from "./components/Contact";
+import About from "./pages/About";
+import Confirmation from "./components/Confirmation";
+import RefundPolicy from "./components/RefundPolicy";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsAndCondition from "./components/TermsAndCondition";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -42,13 +48,22 @@ function App() {
         <main className="main-container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/sign-up" element={<SignUp />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/courses/:title" element={<CourseDetails />} />
+            <Route path="/courses/:id" element={<CourseDetails />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/payment" element={<Payment />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/confirmation" element={<Confirmation />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route
+              path="/terms-and-condition"
+              element={<TermsAndCondition />}
+            />
             <Route element={<PrivateRoute />}>
               <Route path="/logout" element={<Logout />} />
             </Route>

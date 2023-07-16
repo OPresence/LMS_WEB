@@ -1,9 +1,41 @@
-.hero__content h2 {
-  font-weight: 500;
-  line-height: 55px;
-  font-size: 48px;
+.hero__title {
+  font: 100% system-ui, sans-serif;
+  margin: 0 0 1rem 0;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  color: #3b365e;
+}
+
+.hero__title__desc {
+  /* font-family: "Nunito Sans", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+}
+
+.growth__icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: url("../../assests/images/growth.svg");
+}
+
+.hero__btn {
+  width: 200px;
+  font-weight: 500 !important;
+  padding: 10px !important;
+  color: #fff !important;
+  border: 2px solid #17bf9e !important;
+  background-color: #17bf9e !important;
+  transition: all 0.3s ease !important;
+}
+
+.hero__btn:hover {
+  color: #17bf9e !important;
+  background-color: #fff !important;
 }
 
 .hero__content {
-  padding-top: 80px;
+  padding-top: 2rem;
 }

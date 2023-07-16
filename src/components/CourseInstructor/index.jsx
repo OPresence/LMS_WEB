@@ -1,37 +1,38 @@
 import React from "react";
 
-export default function CourseInstructor() {
+export default function CourseInstructor({ course }) {
+  const imgPath =
+    course?.instructor?.imgUrl &&
+    require(`../../assests/images/${course.instructor.imgUrl}`).default;
+
   return (
     <div className="course-instructor">
       <h3 className="title">Course Instructor</h3>
 
       <div className="instructor-profile">
         <div className="profile-images">
-          <img src="assets/images/author-5.jpg" alt="author" />
+          <img src={imgPath} alt="author" />
         </div>
         <div className="profile-content">
-          <h5 className="name">Alena Hedge</h5>
+          <h5 className="name">{course.instructor.name}</h5>
 
           <div className="profile-meta">
             <div className="rating">
               <div className="rating-star">
                 <div className="rating-active" style={{ width: "100%" }}></div>
               </div>
-              <span>(4.6)</span>
+              <span>({course.instructor.rating})</span>
             </div>
             <span className="meta-action">
-              <i className="fas fa-play-circle"></i> 10 Tutorials
+              <i className="fas fa-play-circle"></i>{" "}
+              {course.instructor.tutorials} Tutorials
             </span>
             <span className="meta-action">
-              <i className="fas fa-user"></i> 134 Students
+              <i className="fas fa-user"></i> {course.instructor.students}{" "}
+              Students
             </span>
           </div>
-
-          <p>
-            World-class training and development programs developed by top
-            teachers. Build skills with courses, certificates, and degrees
-            online from world-class universities{" "}
-          </p>
+          <p>{course.instructor.overview}</p>
         </div>
       </div>
     </div>

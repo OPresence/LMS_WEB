@@ -1,0 +1,38 @@
+.privacy__policy__container {
+  width: min(800px, 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 5px;
+  margin: 2.5rem auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  padding: 3rem 3rem;
+}
+
+.privacy__policy__container h6 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 10px auto;
+}
+
+.privacy__policy__container .sub__points {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.privacy__policy__container ul {
+  list-style-type: disc;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+}
