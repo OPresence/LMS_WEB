@@ -8,8 +8,8 @@ import { saveToLocalStorage } from "../../utils";
 
 export default function Login() {
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "vikash@gmail.com",
+    password: "vikash123",
     error: false,
   });
   const navigate = useNavigate();
@@ -30,9 +30,11 @@ export default function Login() {
     login(payload)
       .then((res) => {
         if (res?.data) {
-          setFormData({ ...formData, error: false });
+          setFormData({ ...formData, [error]: false });
           saveToLocalStorage("authToken", res.data.authToken);
           saveToLocalStorage("userInfo", res.data.user);
+          console.log(res.data);
+
           setIsLoggedIn(true);
           navigate("/");
         }
@@ -42,10 +44,6 @@ export default function Login() {
 
   return (
     <div style={{ minHeight: "100vh", width: "100%", background: "#f0f8ff" }}>
-      <Toast isOpen={error} fade={true} className="right">
-        <ToastHeader>Reactstrap</ToastHeader>
-        <ToastBody>Invalid user and password!</ToastBody>
-      </Toast>
       <div className="form login">
         <div className="form-content">
           <header style={{ lineHeight: 1 }}>
@@ -59,7 +57,6 @@ export default function Login() {
               </Link>
             </span>
           </div>
-          {error && <p>Invalid user</p>}
           <form onSubmit={handleSubmit}>
             <div className="field input-field">
               <div

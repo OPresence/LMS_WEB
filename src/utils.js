@@ -1,6 +1,5 @@
 export function saveToLocalStorage(key, value) {
-  const prevData = JSON.parse(localStorage.getItem(key) || {});
-  localStorage.setItem(key, JSON.stringify({ ...prevData, ...value }));
+  localStorage.setItem(key, JSON.stringify(value));
 }
 
 export function removeFromLocalStorage(key) {

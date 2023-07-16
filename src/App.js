@@ -50,8 +50,6 @@ function App() {
     return [];
   });
 
-  console.log({ cartItems });
-
   const handleCartItems = (items) => {
     localStorage.setItem("items", JSON.stringify(items));
     setCartItems(items);
