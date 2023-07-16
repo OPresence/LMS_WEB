@@ -2,7 +2,7 @@ import axios from "axios";
 
 const client = (apiHeaders = {}) => {
   return axios.create({
-    baseURL: "http://localhost:8000/api/",
+    baseURL: `${process.env.REACT_APP_API_BASE_URL}`,
     withCredentials: true,
     headers: {
       Accept: "application/json",
