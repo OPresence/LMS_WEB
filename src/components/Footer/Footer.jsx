@@ -33,7 +33,7 @@ const footerInfoLinks = [
     url: "/refund-policy",
   },
   {
-    display: "Terms of Service",
+    display: "Terms & Conditions",
     url: "/terms-and-condition",
   },
 ];
