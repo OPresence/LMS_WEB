@@ -3,7 +3,7 @@ import { Link, useNavigate, redirect } from "react-router-dom";
 import login from "./helper";
 import { Toast, ToastHeader, ToastBody } from "reactstrap";
 
-import { AuthContext } from "../../authContext";
+import { UserContext } from "../../userContext";
 import { saveToLocalStorage } from "../../utils";
 
 export default function Login() {
@@ -13,7 +13,7 @@ export default function Login() {
     error: false,
   });
   const navigate = useNavigate();
-  const { setIsLoggedIn } = useContext(AuthContext);
+  const { setIsLoggedIn } = useContext(UserContext);
   const { email, password, error } = formData;
 
   const handleChange = (field) => (event) => {
@@ -32,6 +32,7 @@ export default function Login() {
         if (res?.data) {
           setFormData({ ...formData, error: false });
           saveToLocalStorage("authToken", res.data.authToken);
+          saveToLocalStorage("userInfo", res.data.user);
           setIsLoggedIn(true);
           navigate("/");
         }
@@ -47,7 +48,7 @@ export default function Login() {
       </Toast>
       <div className="form login">
         <div className="form-content">
-          <header style={{ lineHeight: 1}}>
+          <header style={{ lineHeight: 1 }}>
             Log in to your personal account
           </header>
           <div className="form-link">

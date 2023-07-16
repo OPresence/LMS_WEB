@@ -1,14 +1,26 @@
-import React, { useEffect } from "react";
-import { Container, Row, Col } from "reactstrap";
+import React, { useState, useEffect, useContext } from "react";
+import { Row, Col } from "reactstrap";
+
+import { UserContext } from "../userContext";
 
 import CourseCard from "../components/Courses-section/CourseCard";
-import Loader from "../components/Loader/Loader";
 import Shape7 from "../assests/shape/shape-7.png";
 import Shape1 from "../assests/shape/shape-1.png";
-
-import coursesData from "../assests/courses";
+import getAllCourses from "../components/Courses-section/helper";
 
 export default function Courses() {
+  const [courseList, setCourseList] = useState([]);
+  const { setCourses } = useContext(UserContext);
+
+  useEffect(() => {
+    getAllCourses().then((res) => {
+      if (res.status === 200) {
+        setCourseList(res.data.courses);
+        setCourses(res.data.courses);
+      }
+    });
+  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -51,8 +63,8 @@ export default function Courses() {
         </Col>
         <Col lg="10" className="mb-5 course__list">
           {React.Children.toArray(
-            coursesData.map((item) => (
-              <CourseCard key={item.id} course={item} />
+            courseList.map((item) => (
+              <CourseCard key={item._id} course={item} />
             ))
           )}
         </Col>

@@ -3,37 +3,32 @@ import { NavLink } from "react-router-dom";
 import { Container } from "reactstrap";
 import "./header.css";
 
-import { AuthContext } from "../../authContext";
+import { UserContext } from "../../userContext";
 
 const navLinks = [
   {
     display: "Home",
     url: "/",
   },
-  // {
-  //   display: "About",
-  //   url: "#",
-  // },
   {
     display: "Courses",
     url: "/courses",
   },
   {
+    display: "About Us",
+    url: "/about",
+  },
+  {
     display: "Contact",
     url: "/contact",
   },
-  // {
-  //   display: "Blog",
-  //   url: "#",
-  // },
 ];
 
 const Header = () => {
   const [toggleUserMenu, setToggleUserMenu] = useState(false);
   const menuRef = useRef();
   const userMenuRef = useRef();
-  const { isLoggedIn } = useContext(AuthContext);
-
+  const { isLoggedIn, cartItems = 0 } = useContext(UserContext);
   const isMobile = window.innerWidth < 767;
 
   useEffect(() => {
@@ -78,14 +73,15 @@ const Header = () => {
                 <li className="nav__item cart__icon">
                   <NavLink to="/cart">
                     <span className="cart__icon__wrapper">
+                      {isMobile && "Cart"}
                       <i class="ri-shopping-cart-2-line"></i>
-                      <span className="cart__value">3</span>
+                      <span className="cart__value">{cartItems.length}</span>
                     </span>
                   </NavLink>
                 </li>
 
                 {isMobile && !isLoggedIn && (
-                  <>
+                  <div style={{ width: "100%", marginLeft: "2rem" }}>
                     <li className="nav__item">
                       <NavLink to="/login">
                         <span>
@@ -102,10 +98,10 @@ const Header = () => {
                         SignUp
                       </NavLink>
                     </li>
-                  </>
+                  </div>
                 )}
-                {isMobile && !isLoggedIn && (
-                  <>
+                {isMobile && isLoggedIn && (
+                  <div style={{ width: "100%", marginLeft: "2rem" }}>
                     <li className="nav__item">
                       <NavLink to="/logout">
                         <span>
@@ -130,7 +126,7 @@ const Header = () => {
                         Orders
                       </NavLink>
                     </li>
-                  </>
+                  </div>
                 )}
 
                 {!isMobile && (
@@ -163,16 +159,8 @@ const Header = () => {
                             </li>
                           </>
                         )}
-                        {!isLoggedIn && (
+                        {isLoggedIn && (
                           <>
-                            <li>
-                              <NavLink to="/logout">
-                                <span>
-                                  <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
-                                </span>
-                                Logout
-                              </NavLink>
-                            </li>
                             <li>
                               <NavLink to="/profile">
                                 <span>
@@ -187,6 +175,14 @@ const Header = () => {
                                   <i class="fa-solid fa-clock-rotate-left"></i>
                                 </span>
                                 Orders
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to="/logout">
+                                <span>
+                                  <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
+                                </span>
+                                Logout
                               </NavLink>
                             </li>
                           </>

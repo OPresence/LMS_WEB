@@ -1,9 +1,17 @@
+.confirmation {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
 .confirmation .card {
   background-color: #fff;
   width: 400px;
   border: none;
   border-radius: 16px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
 .confirmation .info {
@@ -19,7 +27,7 @@
 .confirmation .order {
   font-size: 14px;
   font-weight: 400;
-  color: #b7b5b5;
+  color: #525252;
 }
 
 .confirmation .detail {
@@ -27,7 +35,7 @@
 }
 
 .confirmation .summery {
-  color: #d2cfcf;
+  color: #747474;
   font-weight: 400;
   font-size: 13px;
 }
@@ -45,10 +53,14 @@
 .confirmation .money {
   font-size: 14px;
   font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
 .confirmation .address {
-  color: #d2cfcf;
+  color: #747474;
   font-weight: 500;
   font-size: 14px;
 }

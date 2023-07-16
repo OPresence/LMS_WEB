@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CourseCard = ({ course }) => {
-  console.log({course})
-  const imgPath =
-    require(`../../assests/images/${course.imgUrl}`).default;
+  const imgPath = require(`../../assests/images/${course.imgUrl}`).default;
   return (
     <div className="single__course__item">
       <div className="course__img">
@@ -32,7 +30,7 @@ const CourseCard = ({ course }) => {
           </p>
 
           <p className="enroll d-flex align-items-center gap-1">
-            <Link to={`/courses/${course.id}`}> View Course</Link>
+            <Link to={`/courses/${course._id}`}> View Course</Link>
           </p>
         </div>
       </div>

@@ -5,12 +5,11 @@ import {
   Route,
   useLocation,
   useNavigate,
-  redirect,
   Outlet,
 } from "react-router-dom";
-import { AuthContext } from "./authContext";
-import "./app.css";
+import { UserContext } from "./userContext";
 
+import "./app.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
@@ -41,8 +40,34 @@ function App() {
     return false;
   });
 
+  const [courses, setCourses] = useState([]);
+
+  const [cartItems, setCartItems] = useState(() => {
+    const isExist = localStorage.getItem("items");
+    if (!!isExist) {
+      return JSON.parse(localStorage.getItem("items"));
+    }
+    return [];
+  });
+
+  console.log({ cartItems });
+
+  const handleCartItems = (items) => {
+    localStorage.setItem("items", JSON.stringify(items));
+    setCartItems(items);
+  };
+
   return (
-    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+    <UserContext.Provider
+      value={{
+        isLoggedIn,
+        cartItems,
+        courses,
+        setIsLoggedIn,
+        setCourses,
+        setCartItems: handleCartItems,
+      }}
+    >
       <Router>
         <Header />
         <main className="main-container">
@@ -72,14 +97,14 @@ function App() {
         </main>
         <Footer />
       </Router>
-    </AuthContext.Provider>
+    </UserContext.Provider>
   );
 }
 
 const PrivateRoute = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { isLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn } = useContext(UserContext);
   const ref = useRef(false);
 
   useEffect(() => {

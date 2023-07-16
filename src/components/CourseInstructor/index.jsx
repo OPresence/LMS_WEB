@@ -14,25 +14,25 @@ export default function CourseInstructor({ course }) {
           <img src={imgPath} alt="author" />
         </div>
         <div className="profile-content">
-          <h5 className="name">{course.instructor.name}</h5>
+          <h5 className="name">{course?.instructor?.name}</h5>
 
           <div className="profile-meta">
             <div className="rating">
               <div className="rating-star">
                 <div className="rating-active" style={{ width: "100%" }}></div>
               </div>
-              <span>({course.instructor.rating})</span>
+              <span>({course?.instructor?.rating})</span>
             </div>
             <span className="meta-action">
               <i className="fas fa-play-circle"></i>{" "}
-              {course.instructor.tutorials} Tutorials
+              {course?.instructor?.tutorials} Tutorials
             </span>
             <span className="meta-action">
-              <i className="fas fa-user"></i> {course.instructor.students}{" "}
+              <i className="fas fa-user"></i> {course?.instructor?.students}{" "}
               Students
             </span>
           </div>
-          <p>{course.instructor.overview}</p>
+          <p>{course?.instructor?.overview}</p>
         </div>
       </div>
     </div>

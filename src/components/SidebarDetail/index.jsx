@@ -1,8 +1,37 @@
-import React from "react";
-import sidebarVideoImg from "../../assests/images/graphics-design.png";
+import React, { useContext, useState, useEffect } from "react";
+import { UserContext } from "../../userContext";
 
 export default function SidebarDetail({ course }) {
-  const imgPath = require(`../../assests/images/${course.imgUrl}`).default;
+  const imgPath =
+    course?.imgUrl && require(`../../assests/images/${course.imgUrl}`).default;
+  const { cartItems, setCartItems } = useContext(UserContext);
+  const [isAdded, setIsAdded] = useState(false);
+
+  useEffect(() => {
+    if (cartItems.length) {
+      const isAlreadyAdded = cartItems.some((item) => item._id === course?._id);
+      setIsAdded(isAlreadyAdded);
+    }
+  }, [cartItems]);
+
+  const addToCart = () => {
+    const isExist = cartItems.some((item) => item._id === course?._id);
+    if (!isExist) {
+      setCartItems([...cartItems, course]);
+      setIsAdded(true);
+    } else {
+      removeItem();
+      setIsAdded(false);
+    }
+  };
+
+  const removeItem = () => {
+    const filteredCartItems = cartItems.filter(
+      (item) => item._id !== course._id
+    );
+    setCartItems(filteredCartItems);
+  };
+
   return (
     <div className="col-lg-4">
       <div className="sidebar-details-wrap">
@@ -21,7 +50,7 @@ export default function SidebarDetail({ course }) {
               <span className="label">Price :</span>
               <div className="price">
                 <span className="sale-price">
-                  <i class="fas fa-indian-rupee-sign"></i> {course.price}
+                  <i class="fas fa-indian-rupee-sign"></i> {course?.price}
                 </span>
                 <span className="regular-price">&#8377;102</span>
               </div>
@@ -29,27 +58,29 @@ export default function SidebarDetail({ course }) {
             <ul className="description-list">
               <li>
                 <i className="flaticon-wall-clock"></i> Duration{" "}
-                <span> {course.duration}</span>
+                <span> {course?.duration}</span>
               </li>
               <li>
                 <i className="fas fa-sliders-h"></i> Level{" "}
-                <span> {course.level}</span>
+                <span> {course?.level}</span>
               </li>
               <li>
                 <i className="far fa-file-alt"></i> Lectures{" "}
-                <span> {course.lectures}</span>
+                <span> {course?.lectures}</span>
               </li>
               <li>
                 <i className="fas fa-language"></i> Language{" "}
-                <span> {course.language}</span>
+                <span> {course?.language}</span>
               </li>
               <li>
                 <i className="far fa-user"></i> Enrolled{" "}
-                <span> {course.enrolled} Enrolled</span>
+                <span> {course?.enrolled} Enrolled</span>
               </li>
             </ul>
             <div className="field button-field login__button w-100">
-              <button style={{ padding: "10px" }}>Add To Cart</button>
+              <button style={{ padding: "10px" }} onClick={addToCart}>
+                {isAdded ? "Remove Item" : "Add To Cart"}
+              </button>
             </div>
           </div>
         </div>

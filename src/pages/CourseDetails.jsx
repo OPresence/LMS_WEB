@@ -1,20 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext, useState } from "react";
+import { useParams } from "react-router-dom";
+
+import { UserContext } from "../userContext";
 import CourseDetailBanner from "../components/CourseDetailBanner";
 import Accordion from "../components/Accordion";
 import CourseInstructor from "../components/CourseInstructor";
 import Review from "../components/Review";
 import SidebarDetail from "../components/SidebarDetail";
-import { useParams } from "react-router-dom";
-
-import courses from "../assests/courses";
 
 export default function CourseDetails() {
   const { id } = useParams();
+  const { courses = [] } = useContext(UserContext);
+  const [course, setCourse] = useState({});
 
-  // const course = courses.filter((course) => course.id === id)[0];
-  const course = courses[0];
-
-  console.log({course});
+  useEffect(() => {
+    if (courses.length) {
+      const courseDetails = courses.filter((course) => course._id === id)[0];
+      setCourse(courseDetails);
+    }
+  }, [courses]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -61,7 +65,7 @@ export default function CourseDetails() {
 
                   <Accordion />
                 </div>
-                <CourseInstructor course={course}/>
+                <CourseInstructor course={course} />
                 <Review />
               </div>
             </div>

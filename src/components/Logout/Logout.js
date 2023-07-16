@@ -2,11 +2,11 @@ import React, { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import logout from "./helper";
-import { AuthContext } from "../../authContext";
+import { UserContext } from "../../userContext";
 import { removeFromLocalStorage } from "../../utils";
 
 export default function Logout() {
-  const { setIsLoggedIn } = useContext(AuthContext);
+  const { setIsLoggedIn } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {

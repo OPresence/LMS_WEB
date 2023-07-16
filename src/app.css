@@ -204,7 +204,7 @@ img {
   float: left;
   width: 100%;
 }
-.section{
+.section {
   width: 100%;
 }
 
@@ -1929,7 +1929,6 @@ label {
   }
 }
 
-
 /*--
 /*  06 - Courses CSS
 /*----------------------------------------*/
@@ -3055,7 +3054,6 @@ label {
   padding-top: 95px;
   padding-bottom: 95px;
 }
-
 
 /*--
 /*  12 - Features CSS
@@ -4265,7 +4263,6 @@ label {
   }
 }
 
-
 /*--
 /*  25 - Page Banner CSS
 /*----------------------------------------*/
@@ -4393,7 +4390,6 @@ label {
   box-shadow: 0px 0px 109px 0px rgba(0, 0, 0, 0.18);
   background-color: #ffffff;
 }
-
 
 .course-list-wrapper .sidebar-widget-02 .widget-title {
   font-size: 18px;
@@ -4806,7 +4802,7 @@ label {
 
 @media only screen and (max-width: 1199px) {
   .course-details-wrapper {
-    padding-right: 35px;
+    padding: 0 10px;
   }
 }
 
@@ -5668,4 +5664,3 @@ label {
 .faq-accordion .accordion-item:hover .accordion-button .faq-button {
   transform: rotate(-90deg);
 }
-

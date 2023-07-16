@@ -1,9 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../authContext";
+import { UserContext } from "../../userContext";
 
 import { saveToLocalStorage } from "../../utils";
-import Gender from "./Gender";
 import register from "./helper";
 
 export default function SignUp() {
@@ -20,8 +19,9 @@ export default function SignUp() {
   const setGender = (value) => {
     setUserData({ ...userData, ["gender"]: value });
   };
+
   const navigate = useNavigate();
-  const { setIsLoggedIn } = useContext(AuthContext);
+  const { setIsLoggedIn } = useContext(UserContext);
   const { name, email, password, confirmPassword, mobile, gender } = userData;
 
   const handleChange = (field) => (event) => {
@@ -46,6 +46,7 @@ export default function SignUp() {
         if (res?.status === 200) {
           setUserData({ ...userData, error: false });
           saveToLocalStorage("authToken", res.data.authToken);
+          saveToLocalStorage("userInfo", res.data.user);
           setIsLoggedIn(true);
           navigate("/");
         }
@@ -58,8 +59,8 @@ export default function SignUp() {
       <div className="form">
         <div className="form-content">
           <div style={{ textAlign: "center" }}>
-            <header style={{ lineHeight: 1}}>Join our community</header>
-            <div className="form-link" >
+            <header style={{ lineHeight: 1 }}>Join our community</header>
+            <div className="form-link">
               <span>Register your account now!</span>
             </div>
           </div>

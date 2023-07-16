@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container, Row, Col } from "reactstrap";
-import "./courses.css";
+
+import { UserContext } from "../../userContext";
 import CourseCard from "./CourseCard";
-import coursesData from "../../assests/courses";
+import getAllCourses from "./helper";
+import "./courses.css";
 
 const Courses = () => {
+  const [courseList, setCourseList] = useState([]);
+  const { setCourses } = useContext(UserContext);
+
+  useEffect(() => {
+    getAllCourses().then((res) => {
+      if (res.status === 200) {
+        setCourseList(res.data.courses);
+        setCourses(res.data.courses);
+      }
+    });
+  }, []);
+
   return (
     <section className="mt-5 mb-5">
       <Container>
@@ -32,7 +46,7 @@ const Courses = () => {
             </div>
           </Col>
           {React.Children.toArray(
-            coursesData.map((item) => (
+            courseList.map((item) => (
               <Col lg="4" md="6" sm="6">
                 <CourseCard key={item.id} course={item} />
               </Col>

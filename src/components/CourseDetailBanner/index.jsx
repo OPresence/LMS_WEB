@@ -12,9 +12,6 @@ export default function CourseDetailBanner({ course = {} }) {
         paddingTop: 0,
       }}
     >
-      <div className="shape-1">
-        <img src={Shape7} alt="" />
-      </div>
       <div className="shape-2">
         <img src={Shape1} alt="" />
       </div>

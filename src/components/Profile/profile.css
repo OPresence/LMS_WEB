@@ -1,20 +1,27 @@
 .profile__container {
   width: 100%;
-  height: calc(100vh - 60px);
+  min-height: 100vh;
   font-family: "Nunito Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0rem;
   padding-bottom: 40px;
 }
 
 .profile__container .profile__wrapper {
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  padding: 2rem;
   /* align-items: center; */
 }
 .profile__container .profile__wrapper .border-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-right: 1px solid #75757591;
   padding-right: 40px;
 }
@@ -25,7 +32,9 @@
 }
 
 .profile__container .field__wrapper {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
@@ -69,6 +78,23 @@
 }
 
 @media all and (max-width: 767px) {
+  .profile__container {
+    margin-top: 2rem;
+  }
+  .profile__container .profile__wrapper {
+    width: 90%;
+  }
+  .profile__container .profile__wrapper > div {
+    width: 100%;
+  }
+  .profile__container .profile__wrapper > div .px-5 {
+    padding: 0 !important;
+  }
+
+  .profile__container .profile__wrapper .field__wrapper > div {
+    width: 100% !important;
+  }
+
   .profile__container .profile__wrapper .border-right {
     border: none;
     padding: 0;

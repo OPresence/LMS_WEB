@@ -102,9 +102,10 @@ let courses = [
   // },
 ];
 
-courses = courses.map((course) => {
+courses = courses.map((course, idx) => {
   const id = uuidv4();
-  course["id"] = id;
+  // course["id"] = id;
+  course["id"] = idx + 1;
   return course;
 });
 

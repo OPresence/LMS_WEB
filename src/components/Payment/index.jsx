@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { UserContext } from "../../userContext";
 import "./payment.css";
 
 export default function Payment() {
@@ -64,9 +66,7 @@ export default function Payment() {
       <div class="card box2 shadow-sm">
         <div class="d-flex align-items-center justify-content-between p-md-5 p-4">
           <i class="fa-solid fa-arrow-left"></i>
-          <span class="h5 m-0">
-            Accepted Payment Methods
-          </span>
+          <span class="h5 m-0">Accepted Payment Methods</span>
         </div>
         <ul class="nav nav-tabs mb-3 px-md-4 px-2">
           <li class="nav-item">
@@ -129,10 +129,6 @@ export default function Payment() {
                     placeholder="XXXX XXXX XXXX XXXX"
                   />
                   <span class="">
-                    {/* <img
-                      src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png"
-                      alt=""
-                    /> */}
                     <img
                       loading="eager"
                       src="https://www.freepnglogos.com/uploads/mastercard-png/what-are-the-visa-and-mastercard-limited-acceptance-programs-8.png"
