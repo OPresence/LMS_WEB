@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate, redirect } from "react-router-dom";
 import login from "./helper";
-import { Toast, ToastHeader, ToastBody } from "reactstrap";
+import Loader from "../Loader/Loader";
 
 import { UserContext } from "../../userContext";
 import { saveToLocalStorage } from "../../utils";
@@ -12,6 +12,7 @@ export default function Login() {
     password: "vikash123",
     error: false,
   });
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const { setIsLoggedIn } = useContext(UserContext);
   const { email, password, error } = formData;
@@ -27,23 +28,27 @@ export default function Login() {
       email,
       password,
     };
+    setIsLoading(true);
     login(payload)
       .then((res) => {
         if (res?.data) {
           setFormData({ ...formData, [error]: false });
           saveToLocalStorage("authToken", res.data.authToken);
           saveToLocalStorage("userInfo", res.data.user);
-          console.log(res.data);
-
           setIsLoggedIn(true);
           navigate("/");
+          setIsLoading(false);
         }
       })
-      .catch((err) => setFormData({ ...formData, ["error"]: true }));
+      .catch((err) => {
+        setIsLoading(false);
+        setFormData({ ...formData, ["error"]: true });
+      });
   };
 
   return (
     <div style={{ minHeight: "100vh", width: "100%", background: "#f0f8ff" }}>
+      <Loader show={isLoading} />
       <div className="form login">
         <div className="form-content">
           <header style={{ lineHeight: 1 }}>
@@ -101,31 +106,24 @@ export default function Login() {
               />
               <i className="bx bx-hide eye-icon"></i>
             </div>
-            <div className="form-link">
-              <a href="#" className="forgot-pass">
-                Forgot password?
-              </a>
-            </div>
             <div className="field button-field">
               <button onClick={handleSubmit}>Login</button>
             </div>
+            <br />
+            {!isLoading && error && (
+              <header
+                style={{
+                  fontSize: "16px",
+                  letterSpacing: 1,
+                  lineHeight: 1,
+                  color: "#ff0000ba",
+                }}
+              >
+                Failed to login!
+              </header>
+            )}
           </form>
-          {/* <div className="form-link">
-            <span>
-              Don't have an account?{" "}
-              <Link to="/sign-up" className="link signup-link">
-                Signup
-              </Link>
-            </span>
-          </div> */}
         </div>
-        {/* <div className="line"></div> */}
-        {/* <div className="media-options">
-          <a href="#" className="field google">
-            <img src={GoogleLogo} alt="Google logo" className="google-img" />
-            <span>Login with Google</span>
-          </a>
-        </div> */}
       </div>
     </div>
   );

@@ -2,27 +2,27 @@ import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../userContext";
 
+import Loader from "../Loader/Loader";
 import { saveToLocalStorage } from "../../utils";
 import register from "./helper";
 
 export default function SignUp() {
   const [userData, setUserData] = useState({
-    name: "shivamas110",
-    email: "shivam1asd21212213@gmail.com",
-    password: "shivam123",
-    confirmPassword: "shivam123",
-    mobile: "9087678984",
-    gender: "Male",
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    mobile: "",
+    gender: "",
     error: false,
   });
 
-  const setGender = (value) => {
-    setUserData({ ...userData, ["gender"]: value });
-  };
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
   const { setIsLoggedIn } = useContext(UserContext);
-  const { name, email, password, confirmPassword, mobile, gender } = userData;
+  const { name, email, password, confirmPassword, mobile, gender, error } =
+    userData;
 
   const handleChange = (field) => (event) => {
     const value = event.target.value;
@@ -32,6 +32,7 @@ export default function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (confirmPassword !== password) {
+      setUserData({ ...userData, error: "Password does not match!" });
       return;
     }
     const payload = {
@@ -41,21 +42,28 @@ export default function SignUp() {
       gender,
       name,
     };
+    setIsLoading(true);
     register(payload)
       .then((res) => {
         if (res?.status === 200) {
           setUserData({ ...userData, error: false });
-          saveToLocalStorage("authToken", res.data.authToken);
-          saveToLocalStorage("userInfo", res.data.user);
+          const { authToken, ...user } = res.data;
+          saveToLocalStorage("authToken", authToken);
+          saveToLocalStorage("userInfo", user);
           setIsLoggedIn(true);
+          setIsLoading(false);
           navigate("/");
         }
       })
-      .catch((err) => console.log({ err }));
+      .catch((err) => {
+        setIsLoading(false);
+        setUserData({ ...userData, ["error"]: "Failed to create user!" });
+      });
   };
 
   return (
     <div style={{ minHeight: "100vh", width: "100%", background: "#f0f8ff" }}>
+      <Loader show={isLoading} />
       <div className="form">
         <div className="form-content">
           <div style={{ textAlign: "center" }}>
@@ -179,6 +187,20 @@ export default function SignUp() {
             <div className="field button-field">
               <button>Signup</button>
             </div>
+            <br />
+            {!isLoading && error && (
+              <header
+                style={{
+                  fontSize: "16px",
+                  letterSpacing: 1,
+                  lineHeight: 1,
+                  color: "#ff0000ba",
+                }}
+              >
+                {error}
+              </header>
+            )}
+            <br />
           </form>
           <div className="form-link">
             <span>

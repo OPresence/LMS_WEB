@@ -5,6 +5,7 @@ import {
   Route,
   useLocation,
   useNavigate,
+  Navigate,
   Outlet,
 } from "react-router-dom";
 import { UserContext } from "./userContext";
@@ -28,6 +29,7 @@ import Confirmation from "./components/Confirmation";
 import RefundPolicy from "./components/RefundPolicy";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsAndCondition from "./components/TermsAndCondition";
+import OrderHistory from "./components/OrderHistory";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -75,10 +77,7 @@ function App() {
             <Route path="/courses/:id" element={<CourseDetails />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
-            <Route path="/profile" element={<Profile />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/login" element={<Login />} />
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
@@ -87,7 +86,12 @@ function App() {
               path="/terms-and-condition"
               element={<TermsAndCondition />}
             />
+            <Route path="/not-found" element={<NotFound />} />
             <Route element={<PrivateRoute />}>
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/payment" element={<Payment />} />
+              <Route path="/confirmation" element={<Confirmation />} />
+              <Route path="/order-history" element={<OrderHistory />} />
               <Route path="/logout" element={<Logout />} />
             </Route>
             <Route path="*" element={<NotFound />} />
@@ -105,19 +109,26 @@ const PrivateRoute = () => {
   const { isLoggedIn } = useContext(UserContext);
   const ref = useRef(false);
 
-  useEffect(() => {
-    const path = localStorage.getItem("path");
-    if (path && !ref?.current) {
-      navigate(path);
-      ref.current = true;
-    } else if (ref?.current) {
-      localStorage.setItem("path", location.pathname);
-    }
-  }, [location.pathname]);
-
   if (!isLoggedIn) {
-    navigate("/");
+    // not logged in so redirect to login page with the return url
+    return <Navigate to="/login" state={{ from: history.location }} />;
   }
+
+  // useEffect(() => {
+  //   const path = localStorage.getItem("path");
+  //   if (path && !ref?.current) {
+  //     navigate(path);
+  //     ref.current = true;
+  //   } else if (ref?.current) {
+  //     localStorage.setItem("path", location.pathname);
+  //   }
+  // }, [location.pathname]);
+
+  // if (!isLoggedIn) {
+  //   console.log({ isLoggedIn });
+  //   navigate("/");
+  //   return;
+  // }
 
   return <Outlet />;
 };

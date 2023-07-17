@@ -55,7 +55,6 @@ export default function Cart() {
         if (res.status === 200) {
           navigate("/confirmation");
         }
-        console.log({ res });
       })
       .catch((err) => {
         console.log({ err });

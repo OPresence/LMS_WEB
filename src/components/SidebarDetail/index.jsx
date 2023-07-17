@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../userContext";
 
 export default function SidebarDetail({ course }) {
@@ -77,11 +78,19 @@ export default function SidebarDetail({ course }) {
                 <span> {course?.enrolled} Enrolled</span>
               </li>
             </ul>
-            <div className="field button-field login__button w-100">
+            <div className="flex field button-field login__button w-100">
               <button style={{ padding: "10px" }} onClick={addToCart}>
                 {isAdded ? "Remove Item" : "Add To Cart"}
               </button>
             </div>
+            <p className="text" style={{ textAlign: "center" }}>
+              <Link
+                to="/cart"
+                style={{ color: "#3b365e", textDecoration: "underline" }}
+              >
+                <b>{isAdded && "View Cart"}</b>
+              </Link>
+            </p>
           </div>
         </div>
       </div>

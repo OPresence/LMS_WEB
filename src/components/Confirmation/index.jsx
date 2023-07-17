@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 import { UserContext } from "../../userContext";
 import "./confirmation.css";
@@ -11,7 +11,7 @@ export default function Confirmation() {
   useEffect(() => {
     const id = setTimeout(() => {
       setCartItems([]);
-      navigate("/");
+      <Navigate to="/" state={{ from: history.location }} />;
     }, 2000);
 
     return () => {

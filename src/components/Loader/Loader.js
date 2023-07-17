@@ -1,13 +1,15 @@
 import React from "react";
+import { Spinner } from "reactstrap";
 import "./loader.css";
 
-export default function Loader() {
+export default function Loader({ show = false }) {
   return (
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <>
+      {show ? (
+        <div class="loader">
+          <Spinner>Loading...</Spinner>
+        </div>
+      ) : null}
+    </>
   );
 }

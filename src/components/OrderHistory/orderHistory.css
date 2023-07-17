@@ -1,0 +1,45 @@
+.order__history .title {
+  width: 90%;
+  margin: 0 0 1rem 0;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 5rem;
+  color: #3b365e;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Bitter", serif;
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  margin: 1rem auto;
+}
+
+.order__history table {
+  color: #3b365e;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  padding: 10px;
+}
+
+.order__history thead tr {
+  font-family: "Nunito Sans", sans-serif;
+  border-radius: 5px;
+}
+
+.order__history tbody tr {
+  font-family: "Nunito Sans", sans-serif;
+  border-radius: 5px;
+}
+
+.order__history tbody tr:hover {
+  transition: all 0.3s ease-in;
+  transform: scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.order__history tbody tr a {
+  color: #3b365e;
+}
+
+.order__history tbody tr a:hover {
+  text-decoration: underline !important;
+}

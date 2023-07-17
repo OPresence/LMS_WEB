@@ -4907,18 +4907,18 @@ label {
   transition: all 0.3s linear;
 }
 
-.course-accordion .accordion-item button::before {
+/* .course-accordion .accordion-item button::before {
   content: "\f170";
   font-family: "flaticon";
   font-size: 13px;
   font-weight: 300;
   margin-right: 10px;
   transition: all 0.3s linear;
-}
+} */
 
-.course-accordion .accordion-item button.collapsed::before {
+/* .course-accordion .accordion-item button.collapsed::before {
   content: "\f111";
-}
+} */
 
 .course-accordion .accordion-item .accordion-body {
   padding: 0;

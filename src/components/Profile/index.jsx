@@ -3,12 +3,17 @@ import { Link } from "react-router-dom";
 
 import UpdateProfile from "./helper";
 import { saveToLocalStorage } from "../../utils";
+import Loader from "../Loader/Loader";
 
 import "./profile.css";
 
 export default function Profile() {
   const [userData, setUserData] = useState(() => {
-    const userDetails = JSON.parse(localStorage.getItem("userInfo"));
+    let userDetails = {};
+    if (localStorage.getItem("userInfo")) {
+      console.log(localStorage.getItem("userInfo"));
+      userDetails = JSON.parse(localStorage.getItem("userInfo"));
+    }
 
     return {
       firstName: userDetails?.name?.split(" ")[0] || "",
@@ -21,11 +26,9 @@ export default function Profile() {
     };
   });
 
+  const [isLoading, setIsLoading] = useState(false);
   const [isEditable, setIsEditable] = useState(false);
-  const [status, setStatus] = useState({
-    error: false,
-    message: "",
-  });
+  const [error, setError] = useState(false);
 
   const { firstName, lastName, email, mobile, age, gender, name } = userData;
 
@@ -42,6 +45,11 @@ export default function Profile() {
   };
 
   const updatePassword = () => {
+    if (!gender.toLowerCase().includes(["male", "female"])) {
+      setError("Please enter valid gender!");
+      return;
+    }
+    setIsLoading(true);
     UpdateProfile(userData)
       .then((res) => {
         if (res.status === 200) {
@@ -49,17 +57,21 @@ export default function Profile() {
           saveToLocalStorage("userInfo", userData);
           setStatus({ error: false, message: "" });
           setIsEditable(false);
+          setIsLoading(false);
         } else {
+          setIsLoading(false);
           setStatus({ error: true, message: res.message });
         }
       })
       .catch((err) => {
+        setIsLoading(false);
         setStatus({ error: true, message: err });
       });
   };
 
   return (
     <div className="container rounded bg-white profile__container mb-2">
+      <Loader show={isLoading} />
       <div className="profile__wrapper">
         <div className="col-md-4 border-right">
           <div className="d-flex flex-column justify-content-center align-items-center text-center mb-5">
@@ -95,6 +107,7 @@ export default function Profile() {
                 <i class="fa-regular fa-pen-to-square"></i>Edit Profile
               </h6>
             </div>
+            {error && !isLoading && <h6 className="text-right">{error}</h6>}
             <div className="mt-2 field__wrapper">
               <div className="col-md-5">
                 <label>First Name</label>
@@ -141,7 +154,7 @@ export default function Profile() {
                   onChange={handleChange("mobile")}
                 />
               </div>
-              <div className="col-md-2 ">
+              <div className="col-md-3">
                 <label>Gender</label>
                 <input
                   type="text"

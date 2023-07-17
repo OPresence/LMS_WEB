@@ -7,16 +7,32 @@ import Accordion from "../components/Accordion";
 import CourseInstructor from "../components/CourseInstructor";
 import Review from "../components/Review";
 import SidebarDetail from "../components/SidebarDetail";
+import Loader from "../components/Loader/Loader";
+import NotFound from "../components/NotFound";
+import { getCoursesById } from "../components/Courses-section/helper";
 
 export default function CourseDetails() {
   const { id } = useParams();
   const { courses = [] } = useContext(UserContext);
   const [course, setCourse] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (courses.length) {
       const courseDetails = courses.filter((course) => course._id === id)[0];
       setCourse(courseDetails);
+    } else {
+      setIsLoading(true);
+      getCoursesById(id)
+        .then((res) => {
+          if (res.status === 200) {
+            setCourse(res.data.course);
+            setIsLoading(false);
+          }
+        })
+        .catch((err) => {
+          setIsLoading(false);
+        });
     }
   }, [courses]);
 
@@ -26,6 +42,7 @@ export default function CourseDetails() {
 
   return (
     <div>
+      <Loader show={isLoading} />
       <CourseDetailBanner course={course} />
       <div className="section section-padding">
         <div className="container">

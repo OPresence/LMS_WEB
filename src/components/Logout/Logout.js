@@ -13,6 +13,8 @@ export default function Logout() {
     logout()
       .then((res) => {
         removeFromLocalStorage("authToken");
+        removeFromLocalStorage("userInfo");
+        removeFromLocalStorage("items");
         setIsLoggedIn(false);
         navigate("/");
       })

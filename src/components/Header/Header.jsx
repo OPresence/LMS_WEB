@@ -119,7 +119,7 @@ const Header = () => {
                       </NavLink>
                     </li>
                     <li className="nav__item">
-                      <NavLink to="/orders">
+                      <NavLink to="/order-history">
                         <span>
                           <i class="fa-solid fa-clock-rotate-left"></i>
                         </span>
@@ -170,7 +170,7 @@ const Header = () => {
                               </NavLink>
                             </li>
                             <li>
-                              <NavLink to="/orders">
+                              <NavLink to="/order-history">
                                 <span>
                                   <i class="fa-solid fa-clock-rotate-left"></i>
                                 </span>
