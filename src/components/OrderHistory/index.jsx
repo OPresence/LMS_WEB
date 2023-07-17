@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container } from "reactstrap";
 import { Link } from "react-router-dom";
 
+import Loader from "../Loader/Loader";
 import getEnrolledCourses from "./helper";
 import "./orderHistory.css";
 
@@ -21,19 +22,26 @@ const dateFormatter = (date) => {
 
 export default function OrderHistory() {
   const [enrolledCourses, setEnrolledCourses] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    getEnrolledCourses().then((res) => {
-      if (res.status == 200) {
-        console.log({ res });
-        setEnrolledCourses(res.data.courses);
-      }
-    });
+    setIsLoading(true);
+    getEnrolledCourses()
+      .then((res) => {
+        if (res.status == 200) {
+          setIsLoading(false);
+          setEnrolledCourses(res.data.courses);
+        }
+      })
+      .catch((err) => {
+        setIsLoading(false);
+      });
   }, []);
 
   return (
     <div className="order__history">
       <div className="title">Purchase history </div>
+      <Loader show={isLoading} />
       <Container>
         <div className="mt-5">
           <div class="row">
