@@ -1,33 +1,32 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
-import heroImg from "../../assests/images/hero.svg";
 import "./hero-section.css";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section>
+    <section className="hero__section">
       <Container>
-        <Row>
+        <Row className="wrapper">
           <Col lg="6" md="6">
             <div className="hero__content">
               <h2 className="mb-4 hero__title">
-                We maximize <br />
-                YOUR FINANCIAL
-                <br /> GROWTH <span className="growth__icon"></span>
+                We Simplify <br />
+                Trading for
+                <br /> You.
               </h2>
-              <h5 className="mb-4 title">
-                Personal Mentorship Programs
-              </h5>
+              <h5 className="mb-4 title">Trading, minus the Complexity</h5>
               <Link to="/courses">
-                <button className="btn hero__btn">Explorer Courses</button>
+                <button className="btn hero__btn">
+                  Book your guidance session
+                </button>
               </Link>
             </div>
           </Col>
 
           <Col lg="6" md="6">
-            <img src={heroImg} alt="" className="w-100 hero__img" />
+            <div className="video__wrapper"></div>
           </Col>
         </Row>
       </Container>

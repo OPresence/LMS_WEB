@@ -2,21 +2,47 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./features.css";
 
+import Laptop from "../../assests/laptop.svg";
+import Trading from "../../assests/trading.svg";
+import Experience from "../../assests/experience.svg";
+import Video from "../../assests/video.svg";
+import Book from "../../assests/book.svg";
+import Award from "../../assests/awards.svg";
+import Users from "../../assests/users.svg";
+import Headset from "../../assests/headset.svg";
+
 const FeatureData = [
   {
-    title: "PERSONAL TRADES TAKEN BY MENTORS",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
-    icon: "fa-solid fa-users",
+    title: "Cummilative trading experience of 20+ years",
+    icon: Experience,
   },
 
   {
-    title: "LIVE MARKET SETUPS & DISCUSSIONS",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
-    icon: "fa-solid fa-users-gear",
+    title: "Most simplified and comprehensive curriculum",
+    icon: "fa-solid fa-headset",
   },
   {
-    title: "PREMIUM MEMBERSHIP ACCESS FOR THE DURATION OF COURSE",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
+    title: "Certified Expert: Top B-Schools, CFA, NISM, and NSE.",
+    icon: "fa-solid fa-award",
+  },
+  {
+    title: "Trading challenges with Cash Prizes",
+    icon: "fa-solid fa-award",
+  },
+  {
+    title: "Live trading during market hours",
+    icon: "fa-solid fa-users",
+  },
+  {
+    title: "Doubt solving and strategy review sessions",
+    icon: "fa-solid fa-award",
+  },
+  {
+    title: "Access to Traders den (Community)",
+    icon: "fa-solid fa-award",
+  },
+  {
+    title: "Student Portal",
     icon: "fa-solid fa-award",
   },
 ];
@@ -26,17 +52,57 @@ const Features = () => {
     <section className="features__section">
       <Container>
         <div className="wrapper">
-          {FeatureData.map((item, index) => (
-            <Col lg="3" md="6" key={index}>
-              <div className="single__feature text-center px-4">
-                <h2 className="mb-3">
-                  <i className={item.icon}></i>
-                </h2>
-                <h6>{item.title}</h6>
-                {/* <p>{item.desc}</p> */}
-              </div>
-            </Col>
-          ))}
+          <div className="single__feature text-center px-4">
+            <div>
+              <img src={Experience} />
+            </div>
+            <h6>Cummilative trading experience of 20+ years</h6>
+          </div>
+          <div className="single__feature text-center px-4">
+            <div>
+              <img src={Headset}></img>
+            </div>
+            <h6>Most simplified and comprehensive curriculum</h6>
+          </div>
+          <div className="single__feature text-center px-4">
+            <div>
+              <img src={Award}></img>
+            </div>
+            <h6>Certified Expert: Top B-Schools, CFA, NISM, and NSE.</h6>
+          </div>
+          <div className="single__feature text-center px-4">
+            <div>
+              <img src={Book}></img>
+            </div>
+            <h6>Trading challenges with Cash Prizes</h6>
+          </div>
+          {/* </div> */}
+          {/* <div className="wrapper"> */}
+          <div className="single__feature text-center px-4">
+            <div>
+              <img src={Users}></img>
+            </div>
+            <h6>Live trading during market hours</h6>
+          </div>
+          <div className="single__feature text-center px-4">
+            <div>
+              <img src={Video}></img>
+            </div>
+            <h6>Doubt solving and strategy review sessions</h6>
+          </div>
+          <div className="single__feature text-center px-4">
+            <div>
+              <img src={Trading}></img>
+            </div>
+            <h6>Access to Traders den (Community)</h6>
+          </div>
+          <div className="single__feature text-center px-4">
+            <div>
+              <img src={Laptop}></img>
+            </div>
+            <h6>Student Portal</h6>
+          </div>
+          {/* ))} */}
         </div>
       </Container>
     </section>

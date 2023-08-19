@@ -10,16 +10,35 @@ const footerQuickLinks = [
     url: "/",
   },
   {
+    display: "Pricing",
+    url: "/",
+  },
+  {
     display: "About US",
     url: "/about",
   },
   {
-    display: "Contact US",
+    display: "Contact",
     url: "/contact",
   },
+];
+
+const footerSocialLinks = [
   {
-    display: "Courses",
-    url: "/courses",
+    display: "Facebook",
+    url: "/",
+  },
+  {
+    display: "Instagram",
+    url: "/",
+  },
+  {
+    display: "Twitter",
+    url: "/",
+  },
+  {
+    display: "Linkedin",
+    url: "/",
   },
 ];
 
@@ -41,14 +60,22 @@ const footerInfoLinks = [
 const Footer = () => {
   return (
     <footer className="footer">
-      <Container>
-        <Row>
-          <Col lg="3" md="6" className="mb-4">
-            <h2 className=" d-flex align-items-center gap-1">
-              <i className="ri-pantone-line"></i> Learners.
-            </h2>
+      <div style={{ width: "80%", margin: "0 auto" }}>
+        <Container>
+          <Row>
+            <Col lg="3" md="6" className="mb-4">
+              <h2 className=" d-flex align-items-center gap-1">
+                {/* <i className="ri-pantone-line"></i> */}
+                Learners
+              </h2>
+              <p style={{ display: "flex", flexDirection: "column" }}>
+                <span style={{ lineHeight: "1.3rem" }}>2023 © Learners</span>
+                <span style={{ lineHeight: "1.3rem" }}>
+                  All rights reserved.
+                </span>
+              </p>
 
-            <div className="follows">
+              {/* <div className="follows">
               <p className="mb-0">Follow us on social media</p>
               <span>
                 {" "}
@@ -77,41 +104,58 @@ const Footer = () => {
                   <i className="ri-twitter-line"></i>
                 </a>
               </span>
-            </div>
-          </Col>
+            </div> */}
+            </Col>
 
-          <Col lg="3" md="6" className="mb-4">
-            <h6 className="fw-bold">Explore</h6>
-            <ListGroup className="link__list">
-              {footerQuickLinks.map((item, index) => (
-                <ListGroupItem key={index} className="border-0 ps-0 link__item">
-                  <Link to={item.url}>{item.display}</Link>
-                </ListGroupItem>
-              ))}
-            </ListGroup>
-          </Col>
+            <Col lg="3" md="6" className="mb-4">
+              <ListGroup className="link__list">
+                {footerQuickLinks.map((item, index) => (
+                  <ListGroupItem
+                    key={index}
+                    className="border-0 ps-0 link__item"
+                  >
+                    <Link to={item.url}>{item.display}</Link>
+                  </ListGroupItem>
+                ))}
+              </ListGroup>
+            </Col>
 
-          <Col lg="3" md="6" className="mb-4">
-            <h6 className="fw-bold">Information</h6>
-            <ListGroup className="link__list">
-              {footerInfoLinks.map((item, index) => (
-                <ListGroupItem key={index} className="border-0 ps-0 link__item">
-                  {" "}
-                  <a href={item.url}>{item.display}</a>
-                </ListGroupItem>
-              ))}
-            </ListGroup>
-          </Col>
+            <Col lg="3" md="6" className="mb-4">
+              <ListGroup className="link__list">
+                {footerSocialLinks.map((item, index) => (
+                  <ListGroupItem
+                    key={index}
+                    className="border-0 ps-0 link__item"
+                  >
+                    <a href={item.url}>{item.display}</a>
+                  </ListGroupItem>
+                ))}
+              </ListGroup>
+            </Col>
 
-          <Col lg="3" md="6">
+            <Col lg="3" md="6" className="mb-4">
+              <ListGroup className="link__list">
+                {footerInfoLinks.map((item, index) => (
+                  <ListGroupItem
+                    key={index}
+                    className="border-0 ps-0 link__item"
+                  >
+                    <a href={item.url}>{item.display}</a>
+                  </ListGroupItem>
+                ))}
+              </ListGroup>
+            </Col>
+
+            {/* <Col lg="3" md="6">
             <h6 className="fw-bold">Get in Touch</h6>
 
             <p>Address: Pune, India</p>
             <p> Phone: +91 XXXXX-XXXXX </p>
             <p>Email: Learners@gmail.com</p>
-          </Col>
-        </Row>
-      </Container>
+          </Col> */}
+          </Row>
+        </Container>
+      </div>
     </footer>
   );
 };

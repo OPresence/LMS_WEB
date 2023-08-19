@@ -1,23 +1,44 @@
+.hero__section {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 70vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 0;
+}
+
 .hero__content .hero__title {
-  font: 100% system-ui, sans-serif;
-  margin: 0 0 1rem 0;
-  font-weight: 900;
-  font-size: 3.5rem;
-  line-height: 5rem;
-  text-transform: uppercase;
-  color: #3b365e;
+  overflow: hidden;
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-transform: none;
+  text-align: left;
+  letter-spacing: 0px;
+  line-height: 4.5rem;
+  white-space: pre-line;
+  opacity: 1;
+  visibility: visible;
+  font-family: Poppins;
+  color: rgb(0, 0, 0);
 }
 
 .hero__content .title {
-  width: min(380px, 100%);
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 3rem;
-  position: relative;
+  padding: 0px;
+  outline: transparent solid 0px;
+  white-space: pre-wrap;
+  min-height: 52px;
+  border: 0px;
+  font-family: Inter;
+  font-size: 20px;
+  letter-spacing: 0px;
+  text-transform: none;
+  line-height: 26px;
+  text-align: left;
+  color: rgb(0, 0, 0);
 }
 
-.hero__content .title::after {
+/* .hero__content .title::after {
   content: "";
   width: 100%;
   height: 15px;
@@ -28,7 +49,7 @@
   bottom: 0px;
   left: 0;
   border-radius: 3px;
-}
+} */
 
 .hero__title__desc {
   /* font-family: "Nunito Sans", sans-serif; */
@@ -44,13 +65,14 @@
 }
 
 .hero__btn {
-  width: 200px;
-  font-weight: 500 !important;
+  /* width: 230px; */
+  font-weight: 600 !important;
   padding: 10px !important;
-  color: #fff !important;
-  border: 2px solid #17bf9e !important;
-  background-color: #17bf9e !important;
+  color: #030303 !important;
+  border: 2px solid #030303 !important;
+  background-color: transparent !important;
   transition: all 0.3s ease !important;
+  border-radius: 10px !important;
 }
 
 .hero__btn:hover {
@@ -60,4 +82,22 @@
 
 .hero__content {
   padding-top: 2rem;
+}
+.hero__section .wrapper {
+  align-items: center;
+}
+.hero__section .video__wrapper {
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+@media all and (max-width: 767px) {
+  .hero__section {
+    width: 90%;
+  }
+  .hero__section .wrapper {
+    gap: 3rem;
+  }
 }

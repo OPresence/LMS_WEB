@@ -70,7 +70,7 @@ const Header = () => {
                     </NavLink>
                   </li>
                 ))}
-                <li className="nav__item cart__icon">
+                {/* <li className="nav__item cart__icon">
                   <NavLink to="/cart">
                     <span className="cart__icon__wrapper">
                       {isMobile && "Cart"}
@@ -78,9 +78,9 @@ const Header = () => {
                       <span className="cart__value">{cartItems.length}</span>
                     </span>
                   </NavLink>
-                </li>
+                </li> */}
 
-                {isMobile && !isLoggedIn && (
+                {/* {isMobile && !isLoggedIn && (
                   <div style={{ width: "100%", marginLeft: "2rem" }}>
                     <li className="nav__item">
                       <NavLink to="/login">
@@ -99,8 +99,8 @@ const Header = () => {
                       </NavLink>
                     </li>
                   </div>
-                )}
-                {isMobile && isLoggedIn && (
+                )} */}
+                {/* {isMobile && isLoggedIn && (
                   <div style={{ width: "100%", marginLeft: "2rem" }}>
                     <li className="nav__item">
                       <NavLink to="/logout">
@@ -127,9 +127,9 @@ const Header = () => {
                       </NavLink>
                     </li>
                   </div>
-                )}
+                )} */}
 
-                {!isMobile && (
+                {/* {!isMobile && (
                   <li className="nav__item position-relative" ref={userMenuRef}>
                     <div
                       className="field button-field user__menu"
@@ -190,7 +190,7 @@ const Header = () => {
                       </ul>
                     )}
                   </li>
-                )}
+                )} */}
               </ul>
             </div>
           </div>
