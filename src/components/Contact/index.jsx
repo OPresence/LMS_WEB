@@ -90,7 +90,7 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              <div className="divider__line"></div>
+              <div className="vertical__line"></div>
               <div className="contact__form__container">
                 <div className="contact__form mt-2">
                   <div className="form__item">

@@ -84,7 +84,7 @@
   align-items: center;
 }
 
-.divider__line {
+.vertical__line {
   width: 2px;
   height: 95%;
   align-self: stretch;
