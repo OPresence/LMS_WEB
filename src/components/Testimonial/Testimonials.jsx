@@ -152,8 +152,158 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+                At Lando, we are committed to providing excellent services to
+                our customers and clients and to help them achieve the best
+                outcomes.We believe that we can make a positive impact on our
+                community, industry and the world. We believe that we can make.{" "}
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__img">
+                  <img src="" />
+                </div>
+
+                <div className="author__info">
+                  <div className="author__name">Matthew Low</div>
+                  <div className="role">Tech Support</div>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+                At Lando, we are committed to providing excellent services to
+                our customers and clients and to help them achieve the best
+                outcomes.We believe that we can make a positive impact on our
+                community, industry and the world. We believe that we can make.{" "}
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__img">
+                  <img src="" />
+                </div>
+
+                <div className="author__info">
+                  <div className="author__name">Matthew Low</div>
+                  <div className="role">Tech Support</div>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+                At Lando, we are committed to providing excellent services to
+                our customers and clients and to help them achieve the best
+                outcomes.We believe that we can make a positive impact on our
+                community, industry and the world. We believe that we can make.{" "}
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__img">
+                  <img src="" />
+                </div>
+
+                <div className="author__info">
+                  <div className="author__name">Matthew Low</div>
+                  <div className="role">Tech Support</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="right__col" ref={rightColRef}>
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+                At Lando, we are committed to providing excellent services to
+                our customers and clients and to help them achieve the best
+                outcomes.We believe that we can make a positive impact on our
+                community, industry and the world. We believe that we can make.{" "}
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__img">
+                  <img src="" />
+                </div>
+
+                <div className="author__info">
+                  <div className="author__name">Matthew Low</div>
+                  <div className="role">Tech Support</div>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+                At Lando, we are committed to providing excellent services to
+                our customers and clients and to help them achieve the best
+                outcomes.We believe that we can make a positive impact on our
+                community, industry and the world. We believe that we can make.{" "}
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__img">
+                  <img src="" />
+                </div>
+
+                <div className="author__info">
+                  <div className="author__name">Matthew Low</div>
+                  <div className="role">Tech Support</div>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+                At Lando, we are committed to providing excellent services to
+                our customers and clients and to help them achieve the best
+                outcomes.We believe that we can make a positive impact on our
+                community, industry and the world. We believe that we can make.{" "}
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__img">
+                  <img src="" />
+                </div>
+
+                <div className="author__info">
+                  <div className="author__name">Matthew Low</div>
+                  <div className="role">Tech Support</div>
+                </div>
+              </div>
+            </div>
             <div className="testimonial__card">
               <p className="testimonial__review">
                 At Lando, we are committed to providing excellent services to
