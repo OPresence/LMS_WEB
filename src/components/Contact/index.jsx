@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Row, Col } from "reactstrap";
 
+import Uizard from "../../assests/uizard.png";
 import contact from "./helper";
-
-import Shape7 from "../../assests/shape/shape-7.png";
-import Shape1 from "../../assests/shape/shape-1.png";
 import "./contact.css";
 
 export default function Contact() {
@@ -51,62 +49,20 @@ export default function Contact() {
       <Row className="d-flex justify-content-center">
         <div className="mb-5">
           <div className="wrapper">
-            <div>
-              <h2 className="title">Contact</h2>
-            </div>
             <div className="content__wrapper">
-              <div className="contact__details">
-                <div className="col-md-2 content">
-                  <div className="d-flex flex-column align-items-center text-center">
-                    <i
-                      class="fa-solid fa-phone"
-                      style={{
-                        color: "rgb(49, 100, 244)",
-                        fontSize: "40px",
-                        marginBlock: "5px",
-                      }}
-                    ></i>
-                    <span className="font-weight-bold">Call Us</span>
-                    <span className="text-black-50">+91 XXXX-XXX-XXX</span>
-                  </div>
-                  <div className="d-flex flex-column align-items-center text-center">
-                    <i
-                      class="fa-solid fa-envelope"
-                      style={{
-                        color: "rgb(49, 100, 244)",
-                        fontSize: "40px",
-                        marginBlock: "5px",
-                      }}
-                    ></i>
-                    <span className="font-weight-bold">Email Us</span>
-                    <span className="text-black-50 ">
-                      <a
-                        href="mailto:shivam12@gmail.com"
-                        style={{ color: "unset" }}
-                      >
-                        abc@gmail.com
-                      </a>
-                    </span>
-                  </div>
-                </div>
+              <div className="image">
+                <img src={Uizard} />
               </div>
-              <div className="vertical__line"></div>
               <div className="contact__form__container">
+                <div className="section__header">
+                  <h2 className="title">Contact Us</h2>
+                  <p>Explore the future with us. Feel free to get in touch.</p>
+                </div>
                 <div className="contact__form mt-2">
                   <div className="form__item">
-                    <label>
-                      Name{" "}
-                      <sup>
-                        {" "}
-                        <i
-                          class="fa-solid fa-asterisk"
-                          style={{ color: "#dc0000", fontSize: "10px" }}
-                        ></i>
-                      </sup>
-                    </label>
+                    <label>Name</label>
                     <input
                       type="text"
-                      className="form-control"
                       placeholder="Enter Name "
                       value={name}
                       required
@@ -114,19 +70,9 @@ export default function Contact() {
                     />
                   </div>
                   <div className="form__item">
-                    <label>
-                      Email
-                      <sup>
-                        {" "}
-                        <i
-                          class="fa-solid fa-asterisk"
-                          style={{ color: "#dc0000", fontSize: "10px" }}
-                        ></i>
-                      </sup>
-                    </label>
+                    <label>Email</label>
                     <input
                       type="text"
-                      className="form-control"
                       placeholder="abc@gmail.com"
                       value={email}
                       required
@@ -134,39 +80,9 @@ export default function Contact() {
                     />
                   </div>
                   <div className="form__item">
-                    <label>
-                      Mobile Number
-                      <sup>
-                        {" "}
-                        <i
-                          class="fa-solid fa-asterisk"
-                          style={{ color: "#dc0000", fontSize: "10px" }}
-                        ></i>
-                      </sup>
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      value={mobile}
-                      required
-                      placeholder="+91 xxxxx-xxxxx"
-                      onChange={handleChange("mobile")}
-                    />
-                  </div>
-                  <div className="form__item">
-                    <label>
-                      Message
-                      <sup>
-                        {" "}
-                        <i
-                          class="fa-solid fa-asterisk"
-                          style={{ color: "#dc0000", fontSize: "10px" }}
-                        ></i>
-                      </sup>
-                    </label>
+                    <label>Message</label>
                     <textarea
                       type="text"
-                      className="form-control"
                       placeholder="Message"
                       value={message}
                       required
@@ -174,15 +90,9 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-                <div className="mt-5 text-right">
-                  <button
-                    className="btn"
-                    type="button"
-                    onClick={updatePassword}
-                  >
-                    <span>Submit</span>
-                  </button>
-                </div>
+                <button className="btn" type="button" onClick={updatePassword}>
+                  <span>Send Message</span>
+                </button>
               </div>
             </div>
           </div>

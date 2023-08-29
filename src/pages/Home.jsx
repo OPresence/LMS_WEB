@@ -8,10 +8,11 @@ import Steps from "../components/Steps/Steps";
 import Features from "../components/Feature-section/Features";
 import Teams from "../components/Teams";
 
+import Roadmap from "../components/Roadmap";
 import Testimonials from "../components/Testimonial/Testimonials";
-
+import CourseContent from "../components/CourseContent";
+import SocialContent from "../components/SocialContent";
 import Newsletter from "../components/Newsletter/Newsletter";
-import Roadmap from "../assests/roadmap.jpeg";
 import FAQ from "../components/FAQ";
 
 const Home = () => {
@@ -36,26 +37,24 @@ const Home = () => {
       </div>
       <Features />
       <br />
-      <div
-        style={{
-          margin: "20px 0",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <h3 className="sections__title" style={{ color: "#7f7f7f" }}>
-          Journey of TFL trader <br /> You are in good hands
-        </h3>
-      </div>
+      {/* <Roadmap /> */}
       <br />
-      <div style={{ width: "80%", margin: "0 auto", marginBottom: "10rem" }}>
-        <img src={Roadmap} style={{ aspectRatio: "16/5" }} />
-      </div>
+      <br />
+      <CourseContent />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <br />
       <Steps />
       <br />
       <br />
+      <SocialContent />
       <Testimonials />
       <br />
 

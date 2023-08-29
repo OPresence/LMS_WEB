@@ -1,60 +1,50 @@
 import React, { useEffect, useRef } from "react";
 import "./testimonial.css";
-import { Container, Row, Col } from "reactstrap";
-import useElementOnScreen from "./useElementOnScreen";
 
 const Testimonials = () => {
-  // const [leftColRef, isVisible] = useElementOnScreen({
-  //   root: null,
-  //   rootMargin: "0px",
-  //   threshold: 1.0,
-  // });
-
   const leftColRef = useRef();
   const rightColRef = useRef();
 
-  // console.log({ isVisible });
+  // const handleLeftIntersect = (args) => {
+  //   const { isIntersecting } = args[0];
+  //   if (isIntersecting) {
+  //     leftColRef.current.children[0].style.opacity = "0.4";
+  //   }
+  // };
 
-  const handleLeftIntersect = (args) => {
-    const { isIntersecting } = args[0];
-    if (isIntersecting) {
-      leftColRef.current.children[0].style.opacity = "0.4";
-    }
-  };
+  // const handleRightIntersect = (args) => {
+  //   const { isIntersecting } = args[0];
+  //   if (isIntersecting) {
+  //     rightColRef.current.children[2].style.opacity = "0.4";
+  //   }
+  // };
 
-  const handleRightIntersect = (args) => {
-    const { isIntersecting } = args[0];
-    if (isIntersecting) {
-      rightColRef.current.children[2].style.opacity = "0.4";
-    }
-  };
+  // useEffect(() => {
+  //   if (leftColRef?.current) {
+  //     let observer;
 
-  useEffect(() => {
-    if (leftColRef?.current) {
-      let observer;
+  //     let options = {
+  //       root: null,
+  //       rootMargin: "0px",
+  //       threshold: 0.4,
+  //     };
 
-      let options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.4,
-      };
+  //     observer = new IntersectionObserver(handleLeftIntersect, options);
+  //     observer.observe(leftColRef.current);
+  //   }
+  //   if (rightColRef?.current) {
+  //     let observer;
 
-      observer = new IntersectionObserver(handleLeftIntersect, options);
-      observer.observe(leftColRef.current);
-    }
-    if (rightColRef?.current) {
-      let observer;
+  //     let options = {
+  //       root: null,
+  //       rootMargin: "0px",
+  //       threshold: 0.4,
+  //     };
 
-      let options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.4,
-      };
-
-      observer = new IntersectionObserver(handleRightIntersect, options);
-      observer.observe(rightColRef.current);
-    }
-  }, []);
+  //     observer = new IntersectionObserver(handleRightIntersect, options);
+  //     observer.observe(rightColRef.current);
+  //   }
+  // }, []);
 
   return (
     <section className="testimonial__wrapper ">

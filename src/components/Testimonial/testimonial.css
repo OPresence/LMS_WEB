@@ -1,6 +1,6 @@
 .testimonial__wrapper {
   width: 100%;
-  height: 650px;
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -17,11 +17,13 @@
 
 .testimonial__container {
   width: 80%;
+  height: 700px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   gap: 2rem;
+  overflow: hidden;
 }
 
 .testimonial__container .left__col {
@@ -63,8 +65,8 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  -webkit-animation: scrollUp 12s 1s ease-in-out infinite normal;
-  animation: scrollUp 12s 1s ease-in-out infinite normal;
+  -webkit-animation: scrollUp 50s linear infinite normal;
+  animation: scrollUp 50s linear infinite normal;
 }
 
 .testimonial__review__wrapper .right__col {
@@ -75,8 +77,8 @@
   gap: 10px;
   -webkit-transform: translateY(-5%);
   transform: translateY(-5%);
-  -webkit-animation: scrollDown 12s 1s ease-in-out infinite normal;
-  animation: scrollDown 12s 1s ease-in-out infinite normal;
+  -webkit-animation: scrollDown 50s linear infinite normal;
+  animation: scrollDown 50s linear infinite normal;
 }
 
 .testimonial__card {
@@ -177,16 +179,16 @@
 
 @-webkit-keyframes scrollUp {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
   }
-  95% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%);
+  98% {
+    -webkit-transform: translateY(calc(-150px * 4));
+    transform: translateY(calc(-150px * 4));
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
   }
 }
 
@@ -195,9 +197,9 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-  95% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%);
+  98% {
+    -webkit-transform: translateY(calc(-150px * 4));
+    transform: translateY(calc(-150px * 4));
   }
   100% {
     -webkit-transform: translateY(0);
@@ -207,31 +209,31 @@
 
 @-webkit-keyframes scrollDown {
   0% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%);
-  }
-  95% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+  98% {
+    -webkit-transform: translateY(calc(150px * 4));
+    transform: translateY(calc(150px * 4));
+  }
   100% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 @keyframes scrollDown {
   0% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%);
-  }
-  95% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+  98% {
+    -webkit-transform: translateY(calc(150px * 4));
+    transform: translateY(calc(150px * 4));
+  }
   100% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -240,9 +242,9 @@
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
-  95% {
-    -webkit-transform: translateX(-65%);
-    transform: translateX(-65%);
+  98% {
+    -webkit-transform: translateX(calc(-240px * 5));
+    transform: translateX(calc(-240px * 5));
   }
   100% {
     -webkit-transform: translateX(0);
@@ -255,9 +257,9 @@
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
-  95% {
-    -webkit-transform: translateX(-65%);
-    transform: translateX(-65%);
+  98% {
+    -webkit-transform: translateX(calc(-240px * 5));
+    transform: translateX(calc(-240px * 5));
   }
   100% {
     -webkit-transform: translateX(0);
@@ -270,9 +272,9 @@
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
-  95% {
-    -webkit-transform: translateX(65%);
-    transform: translateX(65%);
+  98% {
+    -webkit-transform: translateX(calc(240px * 5));
+    transform: translateX(calc(240px * 5));
   }
   100% {
     -webkit-transform: translateX(0%);
@@ -285,9 +287,9 @@
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
-  95% {
-    -webkit-transform: translateX(65%);
-    transform: translateX(65%);
+  98% {
+    -webkit-transform: translateX(calc(240px * 5));
+    transform: translateX(calc(240px * 5));
   }
   100% {
     -webkit-transform: translateX(0%);
@@ -305,6 +307,7 @@
   }
   .testimonial__container {
     width: 90%;
+    height: 100%;
     flex-direction: column;
     gap: 0rem;
   }
@@ -321,6 +324,13 @@
   .testimonial__review__wrapper .right__col {
     flex-direction: row;
     padding: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .testimonial__review__wrapper .right__col {
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 
   /* .testimonial__review__wrapper .left__col {
@@ -331,11 +341,11 @@
   /* } */
 
   .testimonial__review__wrapper .left__col {
-    -webkit-animation: slideLeft 12s 1s ease-in-out infinite normal;
-    animation: slideLeft 12s 1s ease-in-out infinite normal;
+    -webkit-animation: slideLeft 50s linear infinite normal;
+    animation: slideLeft 50s linear infinite normal;
   }
   .testimonial__review__wrapper .right__col {
-    -webkit-animation: slideRight 12s 1s ease-in-out infinite normal;
-    animation: slideRight 12s 1s ease-in-out infinite normal;
+    -webkit-animation: slideRight 50s linear infinite normal;
+    animation: slideRight 50s linear infinite normal;
   }
 }

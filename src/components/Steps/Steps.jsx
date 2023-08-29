@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./steps.css";
-import Uizard from "../../assests/uizard.png";
+import Uizard from "../../assests/steps.png";
 
 const Steps = () => {
   return (
@@ -10,11 +10,10 @@ const Steps = () => {
         <div className="image__wrapper">
           <img src={Uizard} />
         </div>
-        <h2>Talk to a pro-trader now!</h2>
-        <p>Just 3 simple steps to optimize your company operations.</p>
-        <button className="step_header signup__btn">
-          <span>Sign up now</span>
-        </button>
+        <div className="header__content">
+          <h2>Talk to a pro-trader now!</h2>
+          <p>Just 2 simple steps to optimize your company operations.</p>
+        </div>
       </div>
       <div className="step_container">
         <div className="steps">
@@ -24,7 +23,7 @@ const Steps = () => {
             session.
           </p>
         </div>
-        <div className="divider__line"></div>
+        <div className="steps_divider__line"></div>
         <div className="steps">
           <h3>Step 2</h3>
           <p>
@@ -32,10 +31,10 @@ const Steps = () => {
             needs.
           </p>
         </div>
-        <div className="divider__line"></div>
         <div className="steps">
-          <h3>Step 3</h3>
-          <p>Poof! You are ready to work smart with optimized operations.</p>
+          <button className="step_header signup__btn">
+            <span>Sign up now</span>
+          </button>
         </div>
       </div>
     </section>
