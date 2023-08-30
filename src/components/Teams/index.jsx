@@ -50,7 +50,7 @@ const Teams = () => {
     <section className="platform__features__section">
       <div className="section__header">
         <h2>Team</h2>
-        <p>Meet the people behind our magical product</p>
+        {/* <p>Meet the people behind our magical product</p> */}
       </div>
       <br />
       <br />

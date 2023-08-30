@@ -58,7 +58,10 @@ const Home = () => {
           alignItems: "center",
         }}
       >
-        <h3 className="sections__title" style={{ color: "#7f7f7f" }}>
+        <h3
+          className="sections__title"
+          style={{ color: "#7f7f7f", textTransform: "uppercase " }}
+        >
           The Edge that defines us
         </h3>
       </div>
@@ -66,8 +69,11 @@ const Home = () => {
       <br />
       <section className="roadmap__wrapper" ref={slider}>
         <div className="sections__header">
-          <h3 className="sections__title" style={{ color: "#7f7f7f" }}>
-            Journey of TFL trader <br /> You are in good hands
+          <h3
+            className="sections__title"
+            style={{ color: "#7f7f7f", textTransform: "uppercase " }}
+          >
+            You are in good hands
           </h3>
         </div>
         <div className="image__animation">
@@ -85,6 +91,13 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* <div
+        style={{ width: "64px", height: "64px", position: "sticky", right: 0 }}
+      >
+        <div style={{ width: "64px", height: "64px" }}>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
+        </div>
+      </div> */}
       <br />
       <br />
       <CourseContent />
@@ -92,19 +105,12 @@ const Home = () => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Steps />
       <br />
       <br />
-      <SocialContent />
       <Testimonials />
+      <SocialContent />
       <br />
-
       <Teams />
       <FAQ />
     </div>

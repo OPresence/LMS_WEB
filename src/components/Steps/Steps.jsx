@@ -10,6 +10,7 @@ const Steps = () => {
         <div className="image__wrapper">
           <img src={Uizard} />
         </div>
+        <br />
         <div className="header__content">
           <h2>Talk to a pro-trader now!</h2>
           <p>Just 2 simple steps to optimize your company operations.</p>

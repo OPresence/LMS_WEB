@@ -37,7 +37,7 @@ export default function SocialContent() {
         <div className="section__header">
           <h2> Social Media</h2>
         </div>
-        <p>People love what we do! Have a look</p>
+        {/* <p>People love what we do! Have a look</p> */}
         <div className="social__media__container">
           <div className="social__media__item"></div>
           <div className="social__media__item"></div>

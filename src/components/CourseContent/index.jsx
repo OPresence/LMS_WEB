@@ -8,7 +8,7 @@ export default function CourseContent() {
     <section className="course__content__wrapper">
       <div className="section__header">
         <h2> Course Content</h2>
-        <p>People love what we do and we want to let your know</p>
+        {/* <p>People love what we do and we want to let your know</p> */}
       </div>
       <div className="divider__line"></div>
       <div className="course__item__wrapper">

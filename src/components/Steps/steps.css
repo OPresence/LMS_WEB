@@ -31,10 +31,10 @@
 }
 
 .step_header .image__wrapper {
-  width: 50%;
+  width: 35%;
   position: absolute;
-  top: -250px;
-  left: 0;
+  top: -80px;
+  left: 100px;
 }
 
 .step_header .image__wrapper img {
@@ -166,14 +166,15 @@
 
   .step_header {
     width: 100%;
+    gap: 1rem;
     justify-content: center;
   }
 
   .step_header .image__wrapper {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     position: unset;
     width: 100%;
-    margin-top: -10rem;
+    margin-top: 2rem;
   }
   .step_header .header__content {
     margin-top: 0rem;

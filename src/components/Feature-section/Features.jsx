@@ -52,57 +52,111 @@ const Features = () => {
     <section className="features__section">
       <Container>
         <div className="wrapper">
-          <div className="single__feature text-center px-4">
-            <div>
-              <img src={Experience} />
+          <div className="single__feature text-center">
+            <div className="single__feature__inner">
+              <div className="single__feature__front">
+                <div>
+                  <img src={Experience} />
+                </div>
+                <h6>Cummilative trading experience of 20+ years</h6>
+              </div>
+              <div className="single__feature__back">
+                <h6>Cummilative trading experience of 20+ years</h6>
+              </div>
             </div>
-            <h6>Cummilative trading experience of 20+ years</h6>
           </div>
-          <div className="single__feature text-center px-4">
-            <div>
-              <img src={Headset}></img>
+          <div className="single__feature text-center">
+            <div className="single__feature__inner">
+              <div className="single__feature__front">
+                <div>
+                  <img src={Headset}></img>
+                </div>
+                <h6>Most simplified and comprehensive curriculum</h6>
+              </div>
+              <div className="single__feature__back">
+                <h6>Cummilative trading experience of 20+ years</h6>
+              </div>
             </div>
-            <h6>Most simplified and comprehensive curriculum</h6>
           </div>
-          <div className="single__feature text-center px-4">
-            <div>
-              <img src={Award}></img>
+          <div className="single__feature text-center">
+            <div className="single__feature__inner">
+              <div className="single__feature__front">
+                <div>
+                  <img src={Award}></img>
+                </div>
+                <h6>Certified Expert: Top B-Schools, CFA, NISM, and NSE.</h6>
+              </div>
+              <div className="single__feature__back">
+                <h6>Cummilative trading experience of 20+ years</h6>
+              </div>
             </div>
-            <h6>Certified Expert: Top B-Schools, CFA, NISM, and NSE.</h6>
           </div>
-          <div className="single__feature text-center px-4">
-            <div>
-              <img src={Book}></img>
+          <div className="single__feature text-center">
+            <div className="single__feature__inner">
+              <div className="single__feature__front">
+                <div>
+                  <img src={Book}></img>
+                </div>
+                <h6>Trading challenges with Cash Prizes</h6>
+              </div>
+              <div className="single__feature__back">
+                <h6>Cummilative trading experience of 20+ years</h6>
+              </div>
             </div>
-            <h6>Trading challenges with Cash Prizes</h6>
           </div>
-          {/* </div> */}
-          {/* <div className="wrapper"> */}
-          <div className="single__feature text-center px-4">
-            <div>
-              <img src={Users}></img>
+
+          <div className="single__feature text-center">
+            <div className="single__feature__inner">
+              <div className="single__feature__front">
+                <div>
+                  <img src={Users}></img>
+                </div>
+                <h6>Live trading during market hours</h6>
+              </div>
+              <div className="single__feature__back">
+                <h6>Cummilative trading experience of 20+ years</h6>
+              </div>
             </div>
-            <h6>Live trading during market hours</h6>
           </div>
-          <div className="single__feature text-center px-4">
-            <div>
-              <img src={Video}></img>
+          <div className="single__feature text-center">
+            <div className="single__feature__inner">
+              <div className="single__feature__front">
+                <div>
+                  <img src={Video}></img>
+                </div>
+                <h6>Doubt solving and strategy review sessions</h6>
+              </div>
+              <div className="single__feature__back">
+                <h6>Cummilative trading experience of 20+ years</h6>
+              </div>
             </div>
-            <h6>Doubt solving and strategy review sessions</h6>
           </div>
-          <div className="single__feature text-center px-4">
-            <div>
-              <img src={Trading}></img>
+          <div className="single__feature text-center">
+            <div className="single__feature__inner">
+              <div className="single__feature__front">
+                <div>
+                  <img src={Trading}></img>
+                </div>
+                <h6>Access to Traders den (Community)</h6>
+              </div>
+              <div className="single__feature__back">
+                <h6>Cummilative trading experience of 20+ years</h6>
+              </div>
             </div>
-            <h6>Access to Traders den (Community)</h6>
           </div>
-          <div className="single__feature text-center px-4">
-            <div>
-              <img src={Laptop}></img>
+          <div className="single__feature text-center">
+            <div className="single__feature__inner">
+              <div className="single__feature__front">
+                <div>
+                  <img src={Laptop}></img>
+                </div>
+                <h6>Student Portal</h6>
+              </div>
+              <div className="single__feature__back">
+                <h6>Cummilative trading experience of 20+ years</h6>
+              </div>
             </div>
-            <h6>Student Portal</h6>
           </div>
-          {/* ))} */}
         </div>
       </Container>
     </section>

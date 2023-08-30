@@ -1,56 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "./testimonial.css";
 
 const Testimonials = () => {
-  const leftColRef = useRef();
-  const rightColRef = useRef();
-
-  // const handleLeftIntersect = (args) => {
-  //   const { isIntersecting } = args[0];
-  //   if (isIntersecting) {
-  //     leftColRef.current.children[0].style.opacity = "0.4";
-  //   }
-  // };
-
-  // const handleRightIntersect = (args) => {
-  //   const { isIntersecting } = args[0];
-  //   if (isIntersecting) {
-  //     rightColRef.current.children[2].style.opacity = "0.4";
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (leftColRef?.current) {
-  //     let observer;
-
-  //     let options = {
-  //       root: null,
-  //       rootMargin: "0px",
-  //       threshold: 0.4,
-  //     };
-
-  //     observer = new IntersectionObserver(handleLeftIntersect, options);
-  //     observer.observe(leftColRef.current);
-  //   }
-  //   if (rightColRef?.current) {
-  //     let observer;
-
-  //     let options = {
-  //       root: null,
-  //       rootMargin: "0px",
-  //       threshold: 0.4,
-  //     };
-
-  //     observer = new IntersectionObserver(handleRightIntersect, options);
-  //     observer.observe(rightColRef.current);
-  //   }
-  // }, []);
-
   return (
     <section className="testimonial__wrapper ">
       <div className="section__header">
         <h2>Testimonials</h2>
-        <p>People love what we do and we want to let your know</p>
+        {/* <p>People love what we do and we want to let your know</p> */}
       </div>
       <br />
       <div className="testimonial__container">
@@ -66,7 +22,7 @@ const Testimonials = () => {
           </p>
         </div>
         <div className="testimonial__review__wrapper">
-          <div className="left__col" ref={leftColRef}>
+          <div className="left__col">
             <div className="testimonial__card">
               <p className="testimonial__review">
                 At Lando, we are committed to providing excellent services to
@@ -218,7 +174,7 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-          <div className="right__col" ref={rightColRef}>
+          <div className="right__col">
             <div className="testimonial__card">
               <p className="testimonial__review">
                 At Lando, we are committed to providing excellent services to

@@ -18,8 +18,8 @@ const HeroSection = () => {
               </h2>
               <h5 className="mb-4 title">Trading, minus the Complexity</h5>
               <Link to="/courses">
-                <button className="btn hero__btn">
-                  Book your guidance session
+                <button className="hero__btn">
+                  <span> Book your guidance session</span>
                 </button>
               </Link>
             </div>
