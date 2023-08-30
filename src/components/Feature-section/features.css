@@ -51,11 +51,18 @@
     width: 100%;
   }
   .features__section .single__feature {
-    width: 150px;
+    max-width: 160px;
     min-height: 250px;
   }
 
   .features__section .single__feature h6 {
     padding: 0.2rem;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .features__section .single__feature {
+    max-width: 200px;
+    min-height: 250px;
   }
 }

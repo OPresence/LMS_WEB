@@ -54,11 +54,14 @@
 .course__item {
   width: 330px;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 10px;
 }
 
 .course__item__wrapper p {
   padding: 0px;
+  margin: 0;
   outline: transparent solid 0px;
   white-space: pre-wrap;
   min-height: 26px;

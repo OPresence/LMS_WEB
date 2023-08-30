@@ -1,28 +1,57 @@
 .roadmap__wrapper {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 2rem;
+  margin: 2rem auto;
+  /* overflow-y: scroll; */
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  position: relative;
+}
+
+.roadmap__wrapper .sections__header {
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .image__animation {
-  width: 100%;
+  width: 400vw;
+  height: 80vh;
   display: flex;
-  overflow: auto;
+  gap: 0;
+  /* overflow-x: hidden;
+  overflow-y: visible;
+  position: relative; */
 }
 
-.image__animation div:nth-child(even) {
-  width: 100%;
-  height: 400px;
-  flex-shrink: 0;
-  background-color: blue;
+.panel {
+  width: 100vw;
+  height: 100%;
 }
 
-.image__animation div:nth-child(odd) {
+.image__animation div img {
   width: 100%;
-  height: 400px;
-  flex-shrink: 0;
-  background-color: yellow;
+  height: 100%;
+  object-fit: contain;
+  /* aspect-ratio: 16/9; */
+}
+
+@media all and (max-width: 767px) {
+  .roadmap__wrapper {
+    /* height: 50vh; */
+  }
+  .image__animation {
+    height: 30vh;
+  }
+  .image__animation .panel {
+    height: 50vh;
+  }
 }
