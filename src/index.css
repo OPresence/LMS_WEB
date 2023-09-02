@@ -41,15 +41,15 @@ p {
   /* font-family: "Poppins", sans-serif; */
   font-weight: 400;
 }
-
+/* 
 button.btn {
   background: #17bf9e;
   color: #fff;
   padding: 7px 25px;
   border-radius: 50px;
-}
+} */
 
-button.btn.remove {
+/* button.btn.remove {
   font-size: 14px;
   padding: 0px 10px;
   border: none;
@@ -62,7 +62,7 @@ button.btn.remove:hover {
   background: #7f81fe;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+} */
 
 i {
   color: #17bf9e;

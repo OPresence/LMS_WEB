@@ -3,10 +3,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./styles.css";
-import Img1 from "../../assests/Animation 1.jpg";
-import Img2 from "../../assests/Animation 2.jpg";
-import Img3 from "../../assests/Animation 3.jpg";
-import Img4 from "../../assests/Animation 4.jpg";
+// import Img1 from "../../assests/Animation 1.jpg";
+// import Img2 from "../../assests/Animation 2.jpg";
+// import Img3 from "../../assests/Animation 3.jpg";
+// import Img4 from "../../assests/Animation 4.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -27,9 +27,7 @@
   height: 80vh;
   display: flex;
   gap: 0;
-  /* overflow-x: hidden;
-  overflow-y: visible;
-  position: relative; */
+  background-image: url("../../assests/background.png");
 }
 
 .panel {
@@ -41,15 +39,14 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* aspect-ratio: 16/9; */
 }
 
 @media all and (max-width: 767px) {
   .roadmap__wrapper {
-    /* height: 50vh; */
+    margin: 1rem auto;
   }
   .image__animation {
-    height: 30vh;
+    height: 100%;
   }
   .image__animation .panel {
     height: 50vh;

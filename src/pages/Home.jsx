@@ -1,6 +1,5 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import HeroSection from "../components/Hero-Section/HeroSection";
-import CompanySection from "../components/Company-section/Company";
 import gsap from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,19 +14,20 @@ import Roadmap from "../components/Roadmap";
 import Testimonials from "../components/Testimonial/Testimonials";
 import CourseContent from "../components/CourseContent";
 import SocialContent from "../components/SocialContent";
-import Newsletter from "../components/Newsletter/Newsletter";
 import FAQ from "../components/FAQ";
+import Modal from "../components/Modal";
 
-import Img1 from "../assests/Animation 1.jpg";
-import Img2 from "../assests/Animation 2.jpg";
-import Img3 from "../assests/Animation 3.jpg";
-import Img4 from "../assests/Animation 4.jpg";
+import Img1 from "../assests/Animation 1.png";
+import Img2 from "../assests/Animation 2.png";
+import Img3 from "../assests/Animation 3.png";
+import Img4 from "../assests/Animation 4.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const component = useRef();
   const slider = useRef();
+  const [showModal, setShowModal] = useState(false);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -38,8 +38,8 @@ const Home = () => {
         scrollTrigger: {
           trigger: slider.current,
           pin: true,
-          scrub: 0.5,
-          snap: 1 / (panels.length - 2),
+          scrub: 1,
+          snap: 1 / (panels.length - 1),
           end: () => "+=" + slider.current.offsetWidth,
         },
       });
@@ -47,8 +47,19 @@ const Home = () => {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setShowModal(true);
+    }, 5000);
+
+    return () => {
+      clearTimeout(id);
+    };
+  });
+
   return (
     <div style={{ marginBottom: "4rem" }} ref={component}>
+      {showModal && <Modal />}
       <HeroSection />
       <div
         style={{
