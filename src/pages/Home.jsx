@@ -49,7 +49,7 @@ const Home = () => {
 
   useEffect(() => {
     const id = setTimeout(() => {
-      setShowModal(true);
+      // setShowModal(true);
     }, 5000);
 
     return () => {

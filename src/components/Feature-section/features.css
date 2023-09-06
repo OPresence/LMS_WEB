@@ -43,6 +43,7 @@
 .single__feature:hover .single__feature__inner {
   transform: rotateY(180deg);
 }
+
 .single__feature__front,
 .single__feature__back {
   position: absolute;
@@ -95,8 +96,17 @@
 }
 
 @media all and (max-width: 375px) {
+  .features__section .wrapper {
+    gap: 1rem;
+  }
   .features__section .single__feature {
-    max-width: 200px;
+    width: 150px;
+    gap: 0.5rem;
+  }
+  .single__feature__front,
+  .single__feature__back {
+    width: 100%;
+    padding: 1rem;
     min-height: 250px;
   }
 }

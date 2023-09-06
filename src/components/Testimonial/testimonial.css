@@ -116,7 +116,7 @@
 .testimonial__author {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
   gap: 1rem;
 }
 .testimonial__author .author__img {
@@ -129,7 +129,7 @@
 .testimonial__author .author__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   /* gap: 5px; */
 }
