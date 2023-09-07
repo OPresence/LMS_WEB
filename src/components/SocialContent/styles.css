@@ -1,17 +1,17 @@
 .social__content__wrapper {
   width: 90%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
   margin: 2rem auto;
   margin-bottom: 4rem;
   padding: 3rem 0.5rem;
+  justify-content: space-around;
 }
 
 .usefull__links,
 .social__media {
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -39,6 +39,7 @@
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
   border: 0px;
   margin: auto;
+  
 }
 
 .item__image__wrapper {
@@ -47,6 +48,8 @@
   align-items: center;
   width: 82px;
   height: 82px;
+  justify-content: space-between;
+
 }
 
 .social__media {
@@ -95,6 +98,7 @@
     flex-direction: column;
     gap: 5rem;
     margin-top: 0;
+    justify-content: space-around;
   }
 
   .usefull__links,

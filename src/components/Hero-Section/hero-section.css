@@ -131,6 +131,17 @@
   height: auto;
 }
 
+.hero__section button.hero__btn:hover {
+  background-color: rgb(255, 255, 255) !important;
+  border: rgb(49, 100, 244) !important;
+
+}
+
+.hero__section button.hero__btn span:hover {
+  color:rgb(49, 100, 244) !important; ;
+
+}
+
 @media all and (max-width: 767px) {
   .hero__section {
     width: 90%;

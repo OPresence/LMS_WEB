@@ -148,8 +148,8 @@
 .testimonial__card .ratings {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
 }
 
 .testimonial__card .ratings i.fa-star {

@@ -34,7 +34,7 @@ const Steps = () => {
         </div>
         <div className="steps">
           <button className="step_header signup__btn">
-            <span>Sign up now</span>
+            <span>Book Your Guidence Session</span>
           </button>
         </div>
       </div>

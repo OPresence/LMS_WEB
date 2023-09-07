@@ -22,6 +22,9 @@ import Img2 from "../assests/Animation 2.png";
 import Img3 from "../assests/Animation 3.png";
 import Img4 from "../assests/Animation 4.png";
 
+import WhatsApp from "../assests/images/whatsapp.png";
+import Instagram from "../assests/images/instagram.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -60,6 +63,38 @@ const Home = () => {
   return (
     <div style={{ marginBottom: "4rem" }} ref={component}>
       {showModal && <Modal />}
+      <div
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "100px", 
+          zIndex: 10000,
+        }}
+      >
+        <a href="https://api.whatsapp.com/send?phone=917619724417" target="_blank" rel="noopener noreferrer">
+          <img
+            src={WhatsApp}
+            alt="Whatsapp"
+            style={{ width: "64px", height: "64px" }}
+          />
+        </a>
+      </div>
+      <div
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "30px",
+          zIndex: 10000,
+        }}
+      >
+        <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/" target="_blank" rel="noopener noreferrer">
+          <img
+            src={Instagram}
+            alt="Instagram"
+            style={{ width: "64px", height: "64px" }}
+          />
+        </a>
+      </div>
       <HeroSection />
       <div
         style={{

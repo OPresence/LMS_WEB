@@ -37,13 +37,12 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
+                {/* <div className="author__img">
                   <img src="" />
-                </div>
+                </div> */}
 
                 <div className="author__info">
                   <div className="author__name">Ankit Patel</div>
-                  <div className="role">Tech Support</div>
                 </div>
               </div>
             </div>
@@ -62,9 +61,9 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
+                {/* <div className="author__img">
                   <img src="" />
-                </div>
+                </div> */}
 
                 <div className="author__info">
                   <div className="author__name">Zaid Jawed</div>
@@ -87,13 +86,8 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
-
                 <div className="author__info">
                   <div className="author__name">Harish Se</div>
-                  {/* <div className="role">Tech Support</div> */}
                 </div>
               </div>
             </div>
@@ -113,9 +107,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+              
 
                 <div className="author__info">
                   <div className="author__name">Harshit Vij</div>
@@ -138,9 +130,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+                
 
                 <div className="author__info">
                   <div className="author__name">Tejas Thakare</div>
@@ -162,9 +152,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
 
                 <div className="author__info">
                   <div className="author__name">SONI SUL</div>
@@ -189,13 +176,10 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+               
 
                 <div className="author__info">
                   <div className="author__name">Ankit Patel</div>
-                  <div className="role">Tech Support</div>
                 </div>
               </div>
             </div>
@@ -214,9 +198,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+                
 
                 <div className="author__info">
                   <div className="author__name">Zaid Jawed</div>
@@ -239,9 +221,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+               
 
                 <div className="author__info">
                   <div className="author__name">Harish Se</div>
@@ -265,9 +245,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+                
 
                 <div className="author__info">
                   <div className="author__name">Harshit Vij</div>
@@ -290,9 +268,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+              
 
                 <div className="author__info">
                   <div className="author__name">Tejas Thakare</div>
@@ -314,9 +290,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+                
 
                 <div className="author__info">
                   <div className="author__name">SONI SUL</div>
@@ -344,9 +318,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+             
 
                 <div className="author__info">
                   <div className="author__name">Deep Dhanuka</div>
@@ -373,9 +345,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+               
 
                 <div className="author__info">
                   <div className="author__name">Mervin Almeida</div>
@@ -398,9 +368,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+               
 
                 <div className="author__info">
                   <div className="author__name">Akash Rana</div>
@@ -422,9 +390,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+              
 
                 <div className="author__info">
                   <div className="author__name">Shubham Aru</div>
@@ -445,9 +411,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+              
 
                 <div className="author__info">
                   <div className="author__name">Janmesh Raval</div>
@@ -468,9 +432,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+              
 
                 <div className="author__info">
                   <div className="author__name">Local Guide</div>
@@ -499,9 +461,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+               
 
                 <div className="author__info">
                   <div className="author__name">Deep Dhanuka</div>
@@ -528,9 +488,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+               
 
                 <div className="author__info">
                   <div className="author__name">Mervin Almeida</div>
@@ -553,9 +511,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+               
 
                 <div className="author__info">
                   <div className="author__name">Akash Rana</div>
@@ -577,9 +533,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+              
 
                 <div className="author__info">
                   <div className="author__name">Shubham Aru</div>
@@ -600,9 +554,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+             
 
                 <div className="author__info">
                   <div className="author__name">Janmesh Raval</div>
@@ -623,9 +575,7 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                <div className="author__img">
-                  <img src="" />
-                </div>
+               
 
                 <div className="author__info">
                   <div className="author__name">Local Guide</div>

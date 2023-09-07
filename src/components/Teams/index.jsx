@@ -93,7 +93,7 @@ const Teams = () => {
               <p>Head of Product</p>
             </div>
           </div>
-          <div className="single__feature text-center px-4">
+          {/* <div className="single__feature text-center px-4">
             <div>
               <img src="" />
             </div>
@@ -128,7 +128,7 @@ const Teams = () => {
               <h6>Denis Forner</h6>
               <p>Head of Product</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </section>

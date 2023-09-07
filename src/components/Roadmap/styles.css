@@ -27,7 +27,7 @@
   height: 80vh;
   display: flex;
   gap: 0;
-  background-image: url("../../assests/background.png");
+  /* background-image: url("../../assests/background.png"); */
 }
 
 .panel {
