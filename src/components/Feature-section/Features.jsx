@@ -51,6 +51,9 @@ const Features = () => {
   return (
     <section className="features__section">
       <Container>
+        <div className="text-center edge-define-us">
+          <h6>Edge Define Us</h6>
+        </div>
         <div className="wrapper">
           <div className="single__feature text-center">
             <div className="single__feature__inner">
@@ -65,7 +68,7 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="single__feature text-center">
+          <div className="single__feature text-center simplified-curriculum">
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>
@@ -78,7 +81,7 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="single__feature text-center">
+          <div className="single__feature text-center certified-expert">
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>
@@ -91,6 +94,7 @@ const Features = () => {
               </div>
             </div>
           </div>
+
           <div className="single__feature text-center">
             <div className="single__feature__inner">
               <div className="single__feature__front">
@@ -118,7 +122,7 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="single__feature text-center">
+          <div className="single__feature text-center doubt__solving">
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>
@@ -131,7 +135,7 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="single__feature text-center">
+          <div className="single__feature text-center access_traders">
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>

@@ -81,6 +81,21 @@
   color: #7f7f7f;
 }
 
+.features__section .simplified-curriculum,
+.features__section .certified-expert {
+  margin-bottom:140px; /* Adjust the value as needed */
+}
+
+.features__section .doubt__solving,
+.features__section .access_traders {
+  margin-top: 140px;
+}
+
+.features__section .edge-define-us {
+  margin-top: 20px; 
+}
+
+
 @media all and (max-width: 767px) {
   .features__section .wrapper {
     width: 100%;

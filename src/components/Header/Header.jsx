@@ -52,7 +52,8 @@ const Header = () => {
           <div className="logo">
             <NavLink to={"/"} className="main-link">
               <h2 className="d-flex align-items-center gap-1">
-                <img src="../assests/images/The-Financial.png"/>
+                {/* <img src="../../assests/images/The-Financial.png"/> */}
+                <img src="../../assests/images/logo.jpg"/>
               </h2>
             </NavLink>
           </div>

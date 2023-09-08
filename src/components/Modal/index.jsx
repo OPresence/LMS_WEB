@@ -9,6 +9,7 @@ import {
 import Target from "../../assests/target.png";
 import BarChart from "../../assests/bar-chart.png";
 import Telegram from "../../assests/telegram.png";
+import modals from "../../assests/images/modal.jpeg";
 import "./styles.css";
 
 function Modal(args) {
@@ -33,7 +34,7 @@ function Modal(args) {
             <div className="left__container">
               <div className="logo"></div>
               <div className="image__wrapper">
-                <img src="https://tradingcafeindia.com/img/Telegram_Mobile_Pic.webp" />
+                <img src= {modals} />
               </div>
             </div>
             <div className="modal__content__wrapper">
@@ -45,8 +46,8 @@ function Modal(args) {
                   <img src={BarChart} />
                 </h3>
                 <p className="description">
-                  <u>Join our Telegram</u> channel to get daily trading ideas
-                  and trading hacks
+                  <u>Join our free telegram channel</u> to get daily trading ideas
+                  and trading hacks and tips
                 </p>
                 <button className="join__btn">
                   <img src={Telegram} />

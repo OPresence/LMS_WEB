@@ -17,10 +17,10 @@ import SocialContent from "../components/SocialContent";
 import FAQ from "../components/FAQ";
 import Modal from "../components/Modal";
 
-import Img1 from "../assests/Animation 1.png";
-import Img2 from "../assests/Animation 2.png";
-import Img3 from "../assests/Animation 3.png";
-import Img4 from "../assests/Animation 4.png";
+import Img1 from "../assests/animation-1.jpg";
+import Img2 from "../assests/animation-2.jpg";
+import Img3 from "../assests/animation-3.jpg";
+import Img4 from "../assests/animation-4.jpg";
 
 import WhatsApp from "../assests/images/whatsapp.png";
 import Instagram from "../assests/images/instagram.png";
@@ -71,7 +71,7 @@ const Home = () => {
           zIndex: 10000,
         }}
       >
-        <a href="https://api.whatsapp.com/send?phone=917619724417" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/message/YBGRXVQQN6RMH1" target="_blank" rel="noopener noreferrer">
           <img
             src={WhatsApp}
             alt="Whatsapp"
@@ -106,9 +106,9 @@ const Home = () => {
       >
         <h3
           className="sections__title"
-          style={{ color: "#7f7f7f", textTransform: "uppercase " }}
+          style={{ color: "#7f7f7f", textTransform: "uppercase " ,marginTop: '60px' }}
         >
-          The Edge that defines us
+          {/* The Edge that defines us */}
         </h3>
       </div>
       <Features />
@@ -124,7 +124,7 @@ const Home = () => {
         </div>
         <div className="image__animation">
           <div className="panel image__1">
-            <img src={Img1} />
+            <img src={Img1}/>
           </div>
           <div className="panel image__2">
             <img src={Img2} />
