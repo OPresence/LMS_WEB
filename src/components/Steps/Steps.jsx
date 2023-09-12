@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./steps.css";
 import Uizard from "../../assests/steps.png";
+import { Link } from "react-router-dom";
 
 const Steps = () => {
   return (
@@ -32,10 +33,12 @@ const Steps = () => {
             needs.
           </p>
         </div>
-        <div className="steps">
-          <button className="step_header signup__btn">
-            <span>Book Your Guidence Session</span>
-          </button>
+        <div className="steps">  
+        <Link to="/contact">
+                <button className="step_header signup__btn">
+                  <span> Book your guidance session</span>
+                </button>
+              </Link>
         </div>
       </div>
     </section>

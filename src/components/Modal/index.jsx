@@ -11,6 +11,7 @@ import BarChart from "../../assests/bar-chart.png";
 import Telegram from "../../assests/telegram.png";
 import modals from "../../assests/images/modal.jpeg";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 function Modal(args) {
   const [modal, setModal] = useState(true);
@@ -34,7 +35,7 @@ function Modal(args) {
             <div className="left__container">
               <div className="logo"></div>
               <div className="image__wrapper">
-                <img src= {modals} />
+                <img src={modals} />
               </div>
             </div>
             <div className="modal__content__wrapper">
@@ -46,13 +47,15 @@ function Modal(args) {
                   <img src={BarChart} />
                 </h3>
                 <p className="description">
-                  <u>Join our free telegram channel</u> to get daily trading ideas
-                  and trading hacks and tips
+                  <u>Join our free telegram channel</u> to get daily trading
+                  ideas and trading hacks and tips
                 </p>
-                <button className="join__btn">
-                  <img src={Telegram} />
-                  <span> Join Now</span>
-                </button>
+                <Link to="https://t.me/joinTFL" target="_blank">
+                  <button className="join__btn">
+                    <img src={Telegram} />
+                    <span> Join Now</span>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

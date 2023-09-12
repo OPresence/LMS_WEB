@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { Link } from "react-router-dom";
+import logo from "../../assests/images/logo.png";
 
 import "./footer.css";
 
@@ -65,46 +66,20 @@ const Footer = () => {
           <Row>
             <Col lg="3" md="6" className="mb-4">
               <h2 className=" d-flex align-items-center gap-1">
-                {/* <i className="ri-pantone-line"></i> */}
-                Learners
+                <img src={logo} width={"120px"} alt="Logo" />
               </h2>
-              <p style={{ display: "flex", flexDirection: "column" }}>
-                <span style={{ lineHeight: "1.3rem" }}>2023 © Learners</span>
-                <span style={{ lineHeight: "1.3rem" }}>
-                  All rights reserved.
-                </span>
-              </p>
-
-              {/* <div className="follows">
-              <p className="mb-0">Follow us on social media</p>
-              <span>
-                {" "}
-                <a href="facebook.com">
-                  <i className="ri-facebook-line"></i>
-                </a>
-              </span>
-
-              <span>
-                {" "}
-                <a href="facebook.com">
-                  <i className="ri-instagram-line"></i>
-                </a>
-              </span>
-
-              <span>
-                {" "}
-                <a href="facebook.com">
-                  <i className="ri-linkedin-line"></i>
-                </a>
-              </span>
-
-              <span>
-                {" "}
-                <a href="facebook.com">
-                  <i className="ri-twitter-line"></i>
-                </a>
-              </span>
-            </div> */}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <p style={{ lineHeight: "1.8rem", marginRight :'143px' }}>
+                  Made with <span style={{ color: "red" }}>&hearts;</span> India
+                </p>
+              
+              </div>
             </Col>
 
             <Col lg="3" md="6" className="mb-4">

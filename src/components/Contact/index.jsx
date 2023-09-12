@@ -79,6 +79,17 @@ export default function Contact() {
                       onChange={handleChange("email")}
                     />
                   </div>
+                 
+                  <div className="form__item">
+                    <label>Phone</label>
+                    <input
+                      type="number"
+                      placeholder="Contact Number"
+                      value={mobile}
+                      required
+                      onChange={handleChange("mobile")}
+                    />
+                  </div>
                   <div className="form__item">
                     <label>Message</label>
                     <textarea

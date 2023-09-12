@@ -2,6 +2,8 @@ import React, { useRef, useContext, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Container } from "reactstrap";
 import "./header.css";
+import logo from '../../assests/images/logo.png';
+
 
 import { UserContext } from "../../userContext";
 
@@ -52,8 +54,7 @@ const Header = () => {
           <div className="logo">
             <NavLink to={"/"} className="main-link">
               <h2 className="d-flex align-items-center gap-1">
-                {/* <img src="../../assests/images/The-Financial.png"/> */}
-                <img src="../../assests/images/logo.jpg"/>
+                <img src={logo} width={'120px'}/>
               </h2>
             </NavLink>
           </div>

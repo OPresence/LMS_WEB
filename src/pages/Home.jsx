@@ -87,7 +87,7 @@ const Home = () => {
           zIndex: 10000,
         }}
       >
-        <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/thefinancialladder/" target="_blank" rel="noopener noreferrer">
           <img
             src={Instagram}
             alt="Instagram"

@@ -141,6 +141,10 @@
   color:rgb(49, 100, 244) !important; ;
 
 }
+.hero__title {
+  color: blue;
+}
+
 
 @media all and (max-width: 767px) {
   .hero__section {
