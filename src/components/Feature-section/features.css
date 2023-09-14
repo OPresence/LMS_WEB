@@ -48,13 +48,13 @@
 .single_feature_blue{
   background-color: #3164F4;
   border-radius: 16px;
-  color: black !important;
+  /* color: black !important; */
 
 }
 .single_feature_orange{
   background-color: rgb(248,147,31);
   border-radius: 16px;
-  color: black !important;
+  /* color: black !important; */
 
 }
 
@@ -85,13 +85,13 @@
 
 .features__section .single__feature div i {
   font-size: 6rem;
-  color: rgb(49, 100, 244);
+  /* color: rgb(49, 100, 244); */
 }
 
 .features__section .single__feature h6 {
   padding: 1rem;
   font-weight: 600;
-  color: #7f7f7f;
+  color: black;
 }
 
 .features__section .simplified-curriculum,

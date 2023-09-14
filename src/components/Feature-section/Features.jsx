@@ -61,10 +61,9 @@ const Features = () => {
                   textTransform: "uppercase ",
                   fontSize: "48px",
                   fontWeight: 600,
-                  lineHeight: '20px',
-                  paddingTop: '10px',
-                  paddingBottom: '10px'
-
+                  lineHeight: "20px",
+                  paddingTop: "10px",
+                  paddingBottom: "10px",
                 }}
               >
                 The Edge that Define Us
@@ -74,53 +73,61 @@ const Features = () => {
           <div className="single__feature text-center single_feature_blue">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Experience} /> */}
-                </div>
+                <div><img src={Experience} /></div>
                 <h6>Cummilative trading experience of 20+ years</h6>
               </div>
               <div className="single__feature__back">
-                <h6>Cummilative trading experience of 20+ years</h6>
+                <h6>
+                  Twenty years of trading experience is not just a milestone;
+                  it's a testament to the wisdom gained through both triumphs
+                  and losses”
+                </h6>
               </div>
             </div>
           </div>
           <div className="single__feature text-center simplified-curriculum single_feature_orange">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Headset}></img> */}
-                </div>
+                <div><img src={Headset}></img></div>
                 <h6>Most simplified and comprehensive curriculum</h6>
               </div>
               <div className="single__feature__back">
-                <h6>Cummilative trading experience of 20+ years</h6>
+                <h6>
+                  The most effective trading program is one that simplifies the
+                  complex, making it accessible to all, and provides a
+                  comprehensive foundation for success in the markets
+                </h6>
               </div>
             </div>
           </div>
           <div className="single__feature text-center certified-expert single_feature_blue">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Award}></img> */}
-                </div>
+                <div><img src={Award}></img></div>
                 <h6>Certified Expert: Top B-Schools, CFA, NISM, and NSE.</h6>
               </div>
               <div className="single__feature__back">
-                <h6>Cummilative trading experience of 20+ years</h6>
+                <h6>
+                  In the realm of trading education, the guidance of Certified
+                  Experts from Top B-Schools, CFA, NISM, and NSE is the
+                  lighthouse that leads aspiring traders
+                </h6>
               </div>
             </div>
           </div>
 
-          <div className="single__feature text-center single_feature_orange" >
+          <div className="single__feature text-center single_feature_orange">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Book}></img> */}
-                </div>
+                <div><img src={Book}></img></div>
                 <h6>Trading challenges with Cash Prizes</h6>
               </div>
               <div className="single__feature__back">
-                <h6>Cummilative trading experience of 20+ years</h6>
+                <h6>
+                  Unlock your trading potential and compete for cash prizes in
+                  our trading challenges. Turn your skills into rewards and
+                  discover the thrill of trading like never before.
+                </h6>
               </div>
             </div>
           </div>
@@ -134,7 +141,10 @@ const Features = () => {
                 <h6>Live trading during market hours</h6>
               </div>
               <div className="single__feature__back">
-                <h6>Cummilative trading experience of 20+ years</h6>
+                <h6>
+                  Live trading not only helps you backtest your system but also
+                  helps you implement in real time and make the most out of it
+                </h6>
               </div>
             </div>
           </div>
@@ -147,20 +157,26 @@ const Features = () => {
                 <h6>Doubt solving and strategy review sessions</h6>
               </div>
               <div className="single__feature__back">
-                <h6>Cummilative trading experience of 20+ years</h6>
+                <h6>
+                  A good trader is someone who is on the path of continuous
+                  learning. Live doubt solving with mentors will help you gain
+                  insights on your mistakes and help improve yourself
+                </h6>
               </div>
             </div>
           </div>
           <div className="single__feature text-center access_traders single_feature_orange">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Trading}></img> */}
-                </div>
+                <div><img src={Trading}></img></div>
                 <h6>Access to Traders den (Community)</h6>
               </div>
               <div className="single__feature__back">
-                <h6>Cummilative trading experience of 20+ years</h6>
+                <h6>
+                  "In trading, your community is your compass. Surround yourself
+                  with a group of peers who inspire, educate, and challenge you
+                  to be your best trader.
+                </h6>
               </div>
             </div>
           </div>
@@ -173,7 +189,11 @@ const Features = () => {
                 <h6>Student Portal</h6>
               </div>
               <div className="single__feature__back">
-                <h6>Cummilative trading experience of 20+ years</h6>
+                <h6>
+                  Stay up to date with the ever changing market with our
+                  exclusive student portal which will help you be updated with
+                  the evolving concepts.
+                </h6>
               </div>
             </div>
           </div>

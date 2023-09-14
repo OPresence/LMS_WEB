@@ -62,8 +62,8 @@ const Teams = () => {
               <img src="" />
             </div>
             <div>
-              <h6>Hannah Mika</h6>
-              <p>CEO</p>
+              <h6>Rushikesh Pawar</h6>
+              {/* <p>CEO</p> */}
             </div>
           </div>
           <div className="single__feature text-center px-4">
@@ -71,8 +71,8 @@ const Teams = () => {
               <img src="" />
             </div>
             <div>
-              <h6>Daniel Peter</h6>
-              <p>CEO</p>
+              <h6>Ammole Paatil</h6>
+              {/* <p>CEO</p> */}
             </div>
           </div>
           <div className="single__feature text-center px-4">
@@ -80,8 +80,8 @@ const Teams = () => {
               <img src="" />
             </div>
             <div>
-              <h6>Lars Mikkel</h6>
-              <p>Head of Operations</p>
+              <h6>Aniruddha Navale</h6>
+              {/* <p>Head of Operations</p> */}
             </div>
           </div>
           <div className="single__feature text-center px-4">
@@ -89,8 +89,8 @@ const Teams = () => {
               <img src="" />
             </div>
             <div>
-              <h6>Denis Forner</h6>
-              <p>Head of Product</p>
+              <h6>Kartik Khurana</h6>
+              {/* <p>Head of Product</p> */}
             </div>
           </div>
           {/* <div className="single__feature text-center px-4">

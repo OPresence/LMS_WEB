@@ -10,7 +10,7 @@ import Target from "../../assests/target.png";
 import BarChart from "../../assests/bar-chart.png";
 import Telegram from "../../assests/telegram.png";
 // import modals from "../../assests/images/modal.jpeg";
-import modals from "../../assests/modal.jpeg";
+import modals from "../../assests/modal.png";
 import "./styles.css";
 import { Link } from "react-router-dom";
 

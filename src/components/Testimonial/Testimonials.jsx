@@ -7,7 +7,7 @@ const Testimonials = () => {
   return (
     <section className="testimonial__wrapper ">
       <div className="section__header">
-        <h2 className="animate__animated animate__bounce">Testimonials</h2>
+        <h2 className="animate__animated animate__bounce">TESTIMONIALS</h2>
         {/* <p>People love what we do and we want to let your know</p> */}
       </div>
       <br />

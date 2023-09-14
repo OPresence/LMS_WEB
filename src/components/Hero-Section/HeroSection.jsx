@@ -26,7 +26,7 @@ const HeroSection = () => {
             <div className="hero__content">
               <h2 className="mb-4 hero__title">
                 We Simplify <br />
-                {toggleText ? "Trading" : "Investment"}  <br/>
+                {toggleText ? "Trading" : "Investing"}  <br/>
                 for You.
               </h2>
               <h5 className="mb-4 title">
