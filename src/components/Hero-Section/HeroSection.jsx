@@ -24,12 +24,49 @@ const HeroSection = () => {
         <Row className="wrapper">
           <Col lg="6" md="6">
             <div className="hero__content">
-              <h2 className="mb-4 hero__title">
-                We Simplify <br />
-                {toggleText ? "Trading" : "Investment"} for
-                <br /> You.
-              </h2>
+              <div class="text__content">
+                <div class="content__container">
+                  <p class="content__container__text hero__title">
+                    We Simplify
+                  </p>
+                </div>
+              </div>
+              <div class="container">
+                <div class="content">
+                  <div class="content__container">
+                    <ul class="content__container__list">
+                      <li class="content__container__list__item">Trading</li>
+                      <li class="content__container__list__item">Investment</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text__content">
+                <div class="content__container">
+                  <p class="content__container__text hero__title">for You.</p>
+                </div>
+              </div>
               <h5 className="mb-4 title">
+                {/* <div class="container">
+                  <div class="content">
+                    <div class="content__container">
+                      <ul class="content__container__list">
+                        <li class="content__container__list__item">Trading</li>
+                        <li class="content__container__list__item">
+                          Investment
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> */}
+                {/* <div class="text__content">
+                  <div class="content__container">
+                    <p class="content__container__text">
+                      , minus the Complexity
+                    </p>
+                  </div>
+                </div> */}
                 {toggleText ? "Trading" : "Investment"}, minus the Complexity
               </h5>
               <Link to="/contact">

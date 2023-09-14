@@ -62,7 +62,7 @@ const Home = () => {
 
   return (
     <div style={{ marginBottom: "4rem" }} ref={component}>
-      {showModal && <Modal />}
+      {/* {showModal && <Modal />} */}
       <div
         style={{
           position: "fixed",
