@@ -45,6 +45,19 @@
   transform: rotateY(180deg);
 }
 
+.single_feature_blue{
+  background-color: #3164F4;
+  border-radius: 16px;
+  color: black !important;
+
+}
+.single_feature_orange{
+  background-color: rgb(248,147,31);
+  border-radius: 16px;
+  color: black !important;
+
+}
+
 .single__feature__front,
 .single__feature__back {
   position: absolute;
@@ -56,7 +69,6 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   padding: 2rem;
-  background-color: rgb(255, 255, 255);
   border-radius: 16px;
   box-shadow: rgba(51, 51, 51, 0.1) 0px 4px 32px;
   border: 0px;
@@ -89,7 +101,7 @@
 
 .features__section .doubt__solving,
 .features__section .access_traders {
-  margin-top: 140px;
+  margin-top: 250px;
 }
 
 .features__section .edge-define-us {

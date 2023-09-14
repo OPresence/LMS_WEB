@@ -56,17 +56,26 @@ const Features = () => {
             <div className="sections__header">
               <h3
                 className="sections__title"
-                style={{ color: "#7f7f7f", textTransform: "uppercase " }}
+                style={{
+                  color: "black",
+                  textTransform: "uppercase ",
+                  fontSize: "48px",
+                  fontWeight: 600,
+                  lineHeight: '20px',
+                  paddingTop: '10px',
+                  paddingBottom: '10px'
+
+                }}
               >
-                Edge Define Us
+                The Edge that Define Us
               </h3>
             </div>
           </div>
-          <div className="single__feature text-center">
+          <div className="single__feature text-center single_feature_blue">
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>
-                  <img src={Experience} />
+                  {/* <img src={Experience} /> */}
                 </div>
                 <h6>Cummilative trading experience of 20+ years</h6>
               </div>
@@ -75,11 +84,11 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="single__feature text-center simplified-curriculum">
+          <div className="single__feature text-center simplified-curriculum single_feature_orange">
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>
-                  <img src={Headset}></img>
+                  {/* <img src={Headset}></img> */}
                 </div>
                 <h6>Most simplified and comprehensive curriculum</h6>
               </div>
@@ -88,11 +97,11 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="single__feature text-center certified-expert">
+          <div className="single__feature text-center certified-expert single_feature_blue">
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>
-                  <img src={Award}></img>
+                  {/* <img src={Award}></img> */}
                 </div>
                 <h6>Certified Expert: Top B-Schools, CFA, NISM, and NSE.</h6>
               </div>
@@ -102,11 +111,11 @@ const Features = () => {
             </div>
           </div>
 
-          <div className="single__feature text-center">
+          <div className="single__feature text-center single_feature_orange" >
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>
-                  <img src={Book}></img>
+                  {/* <img src={Book}></img> */}
                 </div>
                 <h6>Trading challenges with Cash Prizes</h6>
               </div>
@@ -129,7 +138,7 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="single__feature text-center doubt__solving">
+          <div className="single__feature text-center doubt__solving single_feature_blue">
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>
@@ -142,11 +151,11 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="single__feature text-center access_traders">
+          <div className="single__feature text-center access_traders single_feature_orange">
             <div className="single__feature__inner">
               <div className="single__feature__front">
                 <div>
-                  <img src={Trading}></img>
+                  {/* <img src={Trading}></img> */}
                 </div>
                 <h6>Access to Traders den (Community)</h6>
               </div>

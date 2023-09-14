@@ -26,11 +26,11 @@ const HeroSection = () => {
             <div className="hero__content">
               <h2 className="mb-4 hero__title">
                 We Simplify <br />
-                {toggleText ? "Trading" : "Investment"} for
-                <br /> You.
+                {toggleText ? "Trading" : "Investment"}  <br/>
+                for You.
               </h2>
               <h5 className="mb-4 title">
-                {toggleText ? "Trading" : "Investment"}, minus the Complexity
+                Trading, minus the Complexity
               </h5>
               <Link to="/contact">
                 <button className="hero__btn">
