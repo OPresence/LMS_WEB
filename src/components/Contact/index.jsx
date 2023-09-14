@@ -49,15 +49,15 @@ export default function Contact() {
       <Row className="d-flex justify-content-center">
         <div className="mb-5">
           <div className="wrapper">
+            <div className="section__header">
+              <h2 className="title">Contact Us</h2>
+              <p>Explore the future with us. Feel free to get in touch.</p>
+            </div>
             <div className="content__wrapper">
               <div className="image">
                 <img src={Uizard} />
               </div>
               <div className="contact__form__container">
-                <div className="section__header">
-                  <h2 className="title">Contact Us</h2>
-                  <p>Explore the future with us. Feel free to get in touch.</p>
-                </div>
                 <div className="contact__form mt-2">
                   <div className="form__item">
                     <label>Name</label>
@@ -79,7 +79,7 @@ export default function Contact() {
                       onChange={handleChange("email")}
                     />
                   </div>
-                 
+
                   <div className="form__item">
                     <label>Phone</label>
                     <input

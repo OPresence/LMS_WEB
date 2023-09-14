@@ -28,3 +28,9 @@
   color: #0a2b1e;
   font-weight: 500;
 }
+
+@media all and (max-width: 767px) {
+  .footer .logo__wrapper {
+    align-items: flex-start !important;
+  }
+}

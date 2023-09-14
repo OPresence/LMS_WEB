@@ -67,15 +67,20 @@ const Home = () => {
         style={{
           position: "fixed",
           bottom: "20px",
-          right: "100px", 
+          right: "90px",
           zIndex: 10000,
+          filter: "drop-shadow(rgba(100, 100, 111, 0.2) 0px 7px 29px 0px)",
         }}
       >
-        <a href="https://wa.me/message/YBGRXVQQN6RMH1" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://wa.me/message/YBGRXVQQN6RMH1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={WhatsApp}
             alt="Whatsapp"
-            style={{ width: "64px", height: "64px" }}
+            style={{ width: "44px", height: "44px" }}
           />
         </a>
       </div>
@@ -85,32 +90,22 @@ const Home = () => {
           bottom: "20px",
           right: "30px",
           zIndex: 10000,
+          filter: "drop-shadow(rgba(100, 100, 111, 0.2) 0px 7px 29px 0px)",
         }}
       >
-        <a href="https://www.instagram.com/thefinancialladder/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.instagram.com/thefinancialladder/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={Instagram}
             alt="Instagram"
-            style={{ width: "64px", height: "64px" }}
+            style={{ width: "44px", height: "44px" }}
           />
         </a>
       </div>
       <HeroSection />
-      <div
-        style={{
-          margin: "20px 0",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <h3
-          className="sections__title"
-          style={{ color: "#7f7f7f", textTransform: "uppercase " ,marginTop: '60px' }}
-        >
-          {/* The Edge that defines us */}
-        </h3>
-      </div>
       <Features />
       <br />
       <section className="roadmap__wrapper" ref={slider}>
@@ -124,7 +119,7 @@ const Home = () => {
         </div>
         <div className="image__animation">
           <div className="panel image__1">
-            <img src={Img1}/>
+            <img src={Img1} />
           </div>
           <div className="panel image__2">
             <img src={Img2} />
@@ -137,13 +132,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <div
-        style={{ width: "64px", height: "64px", position: "sticky", right: 0 }}
-      >
-        <div style={{ width: "64px", height: "64px" }}>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" />
-        </div>
-      </div> */}
       <br />
       <br />
       <CourseContent />

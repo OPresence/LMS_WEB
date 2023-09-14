@@ -9,14 +9,17 @@ const HeroSection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setToggleText(prevToggle => !prevToggle);
+      setToggleText((prevToggle) => !prevToggle);
     }, 2000); // Toggle every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="hero__section" style={{ height: "100vh", display: "flex", alignItems: "center" }}>
+    <section
+      className="hero__section"
+      style={{ height: "100vh", display: "flex", alignItems: "center" }}
+    >
       <Container>
         <Row className="wrapper">
           <Col lg="6" md="6">

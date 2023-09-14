@@ -51,10 +51,17 @@ const Features = () => {
   return (
     <section className="features__section">
       <Container>
-        <div className="text-center edge-define-us">
-          <h6>Edge Define Us</h6>
-        </div>
         <div className="wrapper">
+          <div className="text-center edge-define-us">
+            <div className="sections__header">
+              <h3
+                className="sections__title"
+                style={{ color: "#7f7f7f", textTransform: "uppercase " }}
+              >
+                Edge Define Us
+              </h3>
+            </div>
+          </div>
           <div className="single__feature text-center">
             <div className="single__feature__inner">
               <div className="single__feature__front">

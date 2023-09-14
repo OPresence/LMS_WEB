@@ -64,7 +64,17 @@ const Footer = () => {
       <div style={{ width: "80%", margin: "0 auto" }}>
         <Container>
           <Row>
-            <Col lg="3" md="6" className="mb-4">
+            <Col
+              lg="3"
+              md="6"
+              className="mb-4 logo__wrapper"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <h2 className=" d-flex align-items-center gap-1">
                 <img src={logo} width={"120px"} alt="Logo" />
               </h2>
@@ -75,10 +85,9 @@ const Footer = () => {
                   alignItems: "center",
                 }}
               >
-                <p style={{ lineHeight: "1.8rem", marginRight :'143px' }}>
+                <p style={{ lineHeight: "1.8rem" }}>
                   Made with <span style={{ color: "red" }}>&hearts;</span> India
                 </p>
-              
               </div>
             </Col>
 

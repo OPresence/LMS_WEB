@@ -15,6 +15,7 @@
   align-items: center;
   margin: 0 auto;
   gap: 50px;
+  position: relative;
 }
 
 .features__section .single__feature {
@@ -83,7 +84,7 @@
 
 .features__section .simplified-curriculum,
 .features__section .certified-expert {
-  margin-bottom:140px; /* Adjust the value as needed */
+  margin-bottom: 140px; /* Adjust the value as needed */
 }
 
 .features__section .doubt__solving,
@@ -92,11 +93,16 @@
 }
 
 .features__section .edge-define-us {
-  margin-top: 20px; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
 @media all and (max-width: 767px) {
+  .features__section {
+    margin: 5rem 0;
+  }
   .features__section .wrapper {
     width: 100%;
   }

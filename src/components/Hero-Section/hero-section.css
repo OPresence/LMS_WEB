@@ -10,6 +10,7 @@
 
 .hero__content .hero__title {
   overflow: hidden;
+  min-height: 200px;
   font-size: 4.5rem;
   font-weight: 600;
   text-transform: none;
@@ -21,6 +22,7 @@
   visibility: visible;
   font-family: Poppins;
   color: rgb(0, 0, 0);
+  transition: min-height 0.3s ease-in;
 }
 
 .hero__content .title {
@@ -76,8 +78,8 @@
 }
 
 .hero__btn:hover {
-  color: #17bf9e !important;
-  background-color: #fff !important;
+  /* color: #17bf9e !important;
+  background-color: #fff !important; */
 }
 
 .hero__content {
@@ -133,22 +135,25 @@
 
 .hero__section button.hero__btn:hover {
   background-color: rgb(255, 255, 255) !important;
-  border: rgb(49, 100, 244) !important;
-
+  border: 1px solid rgb(49, 100, 244) !important;
 }
 
 .hero__section button.hero__btn span:hover {
-  color:rgb(49, 100, 244) !important; ;
-
+  color: rgb(49, 100, 244) !important;
 }
 .hero__title {
   color: blue;
 }
 
-
 @media all and (max-width: 767px) {
   .hero__section {
     width: 90%;
+    margin-top: 5rem;
+  }
+  .hero__content .hero__title {
+    overflow: hidden;
+    font-size: 3rem;
+    line-height: 4rem;
   }
   .hero__section .wrapper {
     gap: 3rem;

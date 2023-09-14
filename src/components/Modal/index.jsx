@@ -9,7 +9,8 @@ import {
 import Target from "../../assests/target.png";
 import BarChart from "../../assests/bar-chart.png";
 import Telegram from "../../assests/telegram.png";
-import modals from "../../assests/images/modal.jpeg";
+// import modals from "../../assests/images/modal.jpeg";
+import modals from "../../assests/modal.jpeg";
 import "./styles.css";
 import { Link } from "react-router-dom";
 
@@ -32,7 +33,14 @@ function Modal(args) {
             <i class="fa-solid fa-xmark" onClick={() => setModal(false)}></i>
           </div>
           <div className="modal__container">
-            <div className="left__container">
+            <a
+              href="https://www.instagram.com/thefinancialladder/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={modals} />
+            </a>
+            {/* <div className="left__container">
               <div className="logo"></div>
               <div className="image__wrapper">
                 <img src={modals} />
@@ -57,7 +65,7 @@ function Modal(args) {
                   </button>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </ModalBody>
         {/* <ModalFooter>
