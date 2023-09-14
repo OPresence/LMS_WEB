@@ -1,11 +1,13 @@
 import React from "react";
 import "./testimonial.css";
+import 'animate.css';
+
 
 const Testimonials = () => {
   return (
     <section className="testimonial__wrapper ">
       <div className="section__header">
-        <h2>Testimonials</h2>
+        <h2 className="animate__animated animate__bounce">Testimonials</h2>
         {/* <p>People love what we do and we want to let your know</p> */}
       </div>
       <br />
@@ -107,8 +109,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-              
-
                 <div className="author__info">
                   <div className="author__name">Harshit Vij</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -130,8 +130,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                
-
                 <div className="author__info">
                   <div className="author__name">Tejas Thakare</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -152,7 +150,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-
                 <div className="author__info">
                   <div className="author__name">SONI SUL</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -176,8 +173,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-               
-
                 <div className="author__info">
                   <div className="author__name">Ankit Patel</div>
                 </div>
@@ -198,8 +193,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                
-
                 <div className="author__info">
                   <div className="author__name">Zaid Jawed</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -221,8 +214,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-               
-
                 <div className="author__info">
                   <div className="author__name">Harish Se</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -245,8 +236,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                
-
                 <div className="author__info">
                   <div className="author__name">Harshit Vij</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -268,8 +257,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-              
-
                 <div className="author__info">
                   <div className="author__name">Tejas Thakare</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -290,8 +277,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-                
-
                 <div className="author__info">
                   <div className="author__name">SONI SUL</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -318,8 +303,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-             
-
                 <div className="author__info">
                   <div className="author__name">Deep Dhanuka</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -345,8 +328,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-               
-
                 <div className="author__info">
                   <div className="author__name">Mervin Almeida</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -368,8 +349,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-               
-
                 <div className="author__info">
                   <div className="author__name">Akash Rana</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -390,8 +369,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-              
-
                 <div className="author__info">
                   <div className="author__name">Shubham Aru</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -411,8 +388,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-              
-
                 <div className="author__info">
                   <div className="author__name">Janmesh Raval</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -432,10 +407,8 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-              
-
                 <div className="author__info">
-                  <div className="author__name">Local Guide</div>
+                  <div className="author__name">Deepak G M</div>
                   {/* <div className="role">Tech Support</div> */}
                 </div>
               </div>
@@ -445,13 +418,12 @@ const Testimonials = () => {
 
             <div className="testimonial__card">
               <p className="testimonial__review">
-                It is a great initiative taken by 3 experienced
-                traders/investors to make the people of India financially
-                literate and teach them about stock market and help them become
-                successful traders. I liked how patient and knowledgeable all
-                the mentors were and could see myself growing and learning day
-                by day. Definitely check their courses out and do enroll, you
-                won't be disappointed.
+                It's a great opportunity for new traders and investors to learn
+                the in-depth aspects of the stock markets and investment ideas
+                from the best mentors. They are always supportive, interactive,
+                passionate about teaching, and clear in their explanations. My
+                best decision was to get trained under them and learn the most
+                from it.
               </p>
               <div className="ratings">
                 <i className="fa-solid fa-star"></i>
@@ -461,8 +433,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-               
-
                 <div className="author__info">
                   <div className="author__name">Deep Dhanuka</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -488,8 +458,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-               
-
                 <div className="author__info">
                   <div className="author__name">Mervin Almeida</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -511,19 +479,22 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-               
-
                 <div className="author__info">
-                  <div className="author__name">Akash Rana</div>
+                  <div className="author__name">Mervin Almeida</div>
                   {/* <div className="role">Tech Support</div> */}
                 </div>
               </div>
             </div>
             <div className="testimonial__card">
               <p className="testimonial__review">
-                One of the best Financial advising Team. Working for the growth
-                of people's who really need support. Thanks to all Financial
-                Ladder Team Love from Pune
+                Learn, practice, and perfect yourself at the right place. The
+                Financial Ladder has tremendous experience in the Indian stock
+                market and other financial markets. It's one of the best guides
+                to learn about the markets, technical skills, chart reading,
+                psychology, risk management, and position sizing. I would
+                recommend anyone and everyone who wants to do trading/investing
+                to enroll themselves if they are looking to understand the
+                market and make money with the right approach.
               </p>
               <div className="ratings">
                 <i className="fa-solid fa-star"></i>
@@ -533,8 +504,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-              
-
                 <div className="author__info">
                   <div className="author__name">Shubham Aru</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -554,8 +523,6 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-             
-
                 <div className="author__info">
                   <div className="author__name">Janmesh Raval</div>
                   {/* <div className="role">Tech Support</div> */}
@@ -575,10 +542,163 @@ const Testimonials = () => {
                 <i className="fa-solid fa-star"></i>
               </div>
               <div className="testimonial__author">
-               
-
                 <div className="author__info">
-                  <div className="author__name">Local Guide</div>
+                  <div className="author__name">Harshit Vij</div>
+                  {/* <div className="role">Tech Support</div> */}
+                </div>
+              </div>
+            </div>
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+                Experienced mentors that not only share their experience by
+                teaching us but also make us financially literate. Excellent
+                management. They teach every aspect of technical analysis and
+                provide support to take new trades. They teach not like teachers
+                but like friends. 💫💫
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__info">
+                  <div className="author__name">Anitosh Jain</div>
+                  {/* <div className="role">Tech Support</div> */}
+                </div>
+              </div>
+            </div>
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+              One of the best platforms to learn and Grow Financially.
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__info">
+                  <div className="author__name">Akash Sheth</div>
+                  {/* <div className="role">Tech Support</div> */}
+                </div>
+              </div>
+            </div>
+            
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+              The best place to learn about the Stock market. The mentors are extremely knowledgeable and friendly.
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__info">
+                  <div className="author__name">Ravi Ahirwar:</div>
+                  {/* <div className="role">Tech Support</div> */}
+                </div>
+              </div>
+            </div>
+          
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+              Indeed a good platform to learn about the stock market and market behavior with decent gain options for calls.
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__info">
+                  <div className="author__name">Premal Amin:</div>
+                  {/* <div className="role">Tech Support</div> */}
+                </div>
+              </div>
+            </div>
+         
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+              One of the best places to learn about the share market!! They not only explain the basics but also make us understand properly!!
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__info">
+                  <div className="author__name">Janmesh Raval:</div>
+                  {/* <div className="role">Tech Support</div> */}
+                </div>
+              </div>
+            </div>
+         
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+              Financial ladder is the best platform to resolve all your queries and doubts about the market... Very supportive mentors.... It's been amazing to learn new things about the market... 😇😊
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__info">
+                  <div className="author__name">Sonu Sul:</div>
+                  {/* <div className="role">Tech Support</div> */}
+                </div>
+              </div>
+            </div>
+          
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+              Great team... Most of their calls are successful... Best place to learn stock market Trading... Wish they keep it going…
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__info">
+                  <div className="author__name">Ankit Shankhwar:</div>
+                  {/* <div className="role">Tech Support</div> */}
+                </div>
+              </div>
+            </div>
+          
+
+            <div className="testimonial__card">
+              <p className="testimonial__review">
+              One of the best Financial advising Teams. Working for the growth of people who really need support. Thanks to all Financial Ladder Team. Love from Pune ❤️
+              </p>
+              <div className="ratings">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <div className="testimonial__author">
+                <div className="author__info">
+                  <div className="author__name">Shubham Aru:</div>
                   {/* <div className="role">Tech Support</div> */}
                 </div>
               </div>

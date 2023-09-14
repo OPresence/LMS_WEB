@@ -112,7 +112,7 @@ const Home = () => {
         <div className="sections__header">
           <h3
             className="sections__title"
-            style={{ color: "#7f7f7f", textTransform: "uppercase " }}
+            style={{ color: "black", textTransform: "uppercase ", fontWeight: 600 , fontSize: '48px', padding: '10px' }}
           >
             You are in good hands
           </h3>

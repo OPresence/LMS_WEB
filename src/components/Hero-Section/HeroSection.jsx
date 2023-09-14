@@ -48,26 +48,8 @@ const HeroSection = () => {
                 </div>
               </div>
               <h5 className="mb-4 title">
-                {/* <div class="container">
-                  <div class="content">
-                    <div class="content__container">
-                      <ul class="content__container__list">
-                        <li class="content__container__list__item">Trading</li>
-                        <li class="content__container__list__item">
-                          Investment
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div> */}
-                {/* <div class="text__content">
-                  <div class="content__container">
-                    <p class="content__container__text">
-                      , minus the Complexity
-                    </p>
-                  </div>
-                </div> */}
-                {toggleText ? "Trading" : "Investment"}, minus the Complexity
+                {/* {toggleText ? "Trading" : "Investment"}, minus the Complexity */}
+                <h5 className="mb-4 title">Trading, minus the Complexity</h5>
               </h5>
               <Link to="/contact">
                 <button className="hero__btn">

@@ -34,7 +34,7 @@ function Modal(args) {
           </div>
           <div className="modal__container">
             <a
-              href="https://www.instagram.com/thefinancialladder/"
+              href="https://t.me/joinTFL/"
               target="_blank"
               rel="noopener noreferrer"
             >
