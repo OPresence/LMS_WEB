@@ -8,8 +8,9 @@ PREFIX=$(echo "$BRANCH_NAME" | cut -d'_' -f1)
 
 # Check if the branch name contains an underscore
 if [ "$(echo "$BRANCH_NAME" | grep -c '_')" -gt 0 ]; then
-  # Prepend the branch name as a prefix to the commit message
-  if [ -z "$(grep -E "^\[$PREFIX\]:" "$1")" ]; then
+  # Check if the commit message already starts with the branch name in square brackets
+  if ! grep -qE "^\[$PREFIX\]:" "$1"; then
+    # Prepend the branch name as a prefix to the commit message
     sed -i.bak -e "1s/^/\[$PREFIX\]: /" "$1"
   fi
 fi
