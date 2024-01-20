@@ -51,7 +51,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "your-pre-commit-script.sh"
     }
   },
   "devDependencies": {
