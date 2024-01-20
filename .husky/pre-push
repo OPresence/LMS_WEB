@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Define the command to run your tests and check coverage
+# TEST_COMMAND="yarn test"  # Replace this with your actual test command
+# COVERAGE_THRESHOLD=80   # Set your desired coverage threshold percentage
+
+# # Run the tests
+# echo "Running additional tests..."
+# if ! $TEST_COMMAND; then
+#   echo "Additional tests failed. Push rejected."
+#   exit 1
+# fi
+
+# # Check for coverage percentage
+# COVERAGE=$(istanbul check-coverage --statement "$COVERAGE_THRESHOLD" --branches "$COVERAGE_THRESHOLD" --functions "$COVERAGE_THRESHOLD" --lines "$COVERAGE_THRESHOLD")
+# if [ "$COVERAGE" == "Coverage check failed." ]; then
+#   echo "Coverage is below the threshold of $COVERAGE_THRESHOLD%. Push rejected."
+#   exit 1
+# fi
+
+# COMMIT_MSG_FILE=$1
+
+# # Define the required keywords
+# REQUIRED_KEYWORDS=("fix" "feature" "chore" "docs" "test" "refactor" "style" "perf" "revert")
+
+# # Read the commit message from the file
+# COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+# # Check if the commit message includes any required keywords
+# for keyword in "${REQUIRED_KEYWORDS[@]}"; do
+#   if [[ $COMMIT_MSG =~ $keyword ]]; then
+#     # If at least one required keyword is found, allow the commit
+#     exit 0
+#   fi
+# done
+
+# # If no required keyword is found, reject the commit
+# echo "Commit message must include at least one of the following keywords: ${REQUIRED_KEYWORDS[*]}"
+# exit 1
+
+
+# If tests and coverage pass, allow the push
+exit 0

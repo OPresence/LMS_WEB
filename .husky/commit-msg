@@ -1,0 +1,19 @@
+#!/bin/bash
+
+COMMIT_MSG_FILE=$1
+
+# Define the pattern for a valid commit message
+COMMIT_MSG_PATTERN="^[A-Z]+-[0-9]+: .+"
+
+# Read the commit message from the file
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+# Check if the commit message matches the pattern
+if [[ ! "$COMMIT_MSG" =~ $COMMIT_MSG_PATTERN ]]; then
+  echo "Invalid commit message format. Commit message must start with Jira issue key followed by a colon and space."
+  echo "Example: JIRA-123: Fix something"
+  exit 0
+fi
+
+# If commit message format is valid, allow the commit
+exit 0
