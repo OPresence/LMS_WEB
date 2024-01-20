@@ -1,16 +1,14 @@
-#!/bin/bash
+# prepending commit message.
+if [ -z "$BRANCHES_TO_SKIP" ]; then
+  BRANCHES_TO_SKIP=(master develop release)
+fi
 
-# Extract the branch name
-BRANCH_NAME=$(git branch | grep '*' | sed 's/* //')
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+BRANCH_NAME="${BRANCH_NAME##*/}"
 
-# Extract the prefix up to the first underscore
-PREFIX=$(echo "$BRANCH_NAME" | cut -d'_' -f1)
+BRANCH_EXCLUDED=$(printf "%s\n" "${BRANCHES_TO_SKIP[@]}" | grep -c "^$BRANCH_NAME$")
+BRANCH_IN_COMMIT=$(grep -c "\[$BRANCH_NAME\]" $1)
 
-# Check if the branch name contains an underscore
-if [ "$(echo "$BRANCH_NAME" | grep -c '_')" -gt 0 ]; then
-  # Check if the commit message already starts with the branch name in square brackets
-  if ! grep -qE "^\[$PREFIX\]:" "$1"; then
-    # Prepend the branch name as a prefix to the commit message
-    sed -i.bak -e "1s/^/\[$PREFIX\]: /" "$1"
-  fi
+if [ -n "$BRANCH_NAME" ] && ! [[ $BRANCH_EXCLUDED -eq 1 ]] && ! [[ $BRANCH_IN_COMMIT -ge 1 ]]; then
+  sed -i.bak -e "1s/^/$BRANCH_NAME - /" $1
 fi
