@@ -61,10 +61,9 @@ const Features = () => {
                   textTransform: "uppercase ",
                   fontSize: "48px",
                   fontWeight: 600,
-                  lineHeight: '20px',
-                  paddingTop: '10px',
-                  paddingBottom: '10px'
-
+                  lineHeight: "20px",
+                  paddingTop: "10px",
+                  paddingBottom: "10px",
                 }}
               >
                 The Edge that Define Us
@@ -74,9 +73,7 @@ const Features = () => {
           <div className="single__feature text-center single_feature_blue">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Experience} /> */}
-                </div>
+                <div>{/* <img src={Experience} /> */}</div>
                 <h6>Cummilative trading experience of 20+ years</h6>
               </div>
               <div className="single__feature__back">
@@ -87,9 +84,7 @@ const Features = () => {
           <div className="single__feature text-center simplified-curriculum single_feature_orange">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Headset}></img> */}
-                </div>
+                <div>{/* <img src={Headset}></img> */}</div>
                 <h6>Most simplified and comprehensive curriculum</h6>
               </div>
               <div className="single__feature__back">
@@ -100,9 +95,7 @@ const Features = () => {
           <div className="single__feature text-center certified-expert single_feature_blue">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Award}></img> */}
-                </div>
+                <div>{/* <img src={Award}></img> */}</div>
                 <h6>Certified Expert: Top B-Schools, CFA, NISM, and NSE.</h6>
               </div>
               <div className="single__feature__back">
@@ -111,12 +104,10 @@ const Features = () => {
             </div>
           </div>
 
-          <div className="single__feature text-center single_feature_orange" >
+          <div className="single__feature text-center single_feature_orange">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Book}></img> */}
-                </div>
+                <div>{/* <img src={Book}></img> */}</div>
                 <h6>Trading challenges with Cash Prizes</h6>
               </div>
               <div className="single__feature__back">
@@ -154,9 +145,7 @@ const Features = () => {
           <div className="single__feature text-center access_traders single_feature_orange">
             <div className="single__feature__inner">
               <div className="single__feature__front">
-                <div>
-                  {/* <img src={Trading}></img> */}
-                </div>
+                <div>{/* <img src={Trading}></img> */}</div>
                 <h6>Access to Traders den (Community)</h6>
               </div>
               <div className="single__feature__back">

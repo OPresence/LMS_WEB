@@ -1,7 +1,6 @@
 import React from "react";
 import "./testimonial.css";
-import 'animate.css';
-
+import "animate.css";
 
 const Testimonials = () => {
   return (
@@ -572,7 +571,7 @@ const Testimonials = () => {
             </div>
             <div className="testimonial__card">
               <p className="testimonial__review">
-              One of the best platforms to learn and Grow Financially.
+                One of the best platforms to learn and Grow Financially.
               </p>
               <div className="ratings">
                 <i className="fa-solid fa-star"></i>
@@ -588,10 +587,11 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="testimonial__card">
               <p className="testimonial__review">
-              The best place to learn about the Stock market. The mentors are extremely knowledgeable and friendly.
+                The best place to learn about the Stock market. The mentors are
+                extremely knowledgeable and friendly.
               </p>
               <div className="ratings">
                 <i className="fa-solid fa-star"></i>
@@ -607,10 +607,11 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
-          
+
             <div className="testimonial__card">
               <p className="testimonial__review">
-              Indeed a good platform to learn about the stock market and market behavior with decent gain options for calls.
+                Indeed a good platform to learn about the stock market and
+                market behavior with decent gain options for calls.
               </p>
               <div className="ratings">
                 <i className="fa-solid fa-star"></i>
@@ -626,10 +627,12 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
-         
+
             <div className="testimonial__card">
               <p className="testimonial__review">
-              One of the best places to learn about the share market!! They not only explain the basics but also make us understand properly!!
+                One of the best places to learn about the share market!! They
+                not only explain the basics but also make us understand
+                properly!!
               </p>
               <div className="ratings">
                 <i className="fa-solid fa-star"></i>
@@ -645,10 +648,13 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
-         
+
             <div className="testimonial__card">
               <p className="testimonial__review">
-              Financial ladder is the best platform to resolve all your queries and doubts about the market... Very supportive mentors.... It's been amazing to learn new things about the market... 😇😊
+                Financial ladder is the best platform to resolve all your
+                queries and doubts about the market... Very supportive
+                mentors.... It's been amazing to learn new things about the
+                market... 😇😊
               </p>
               <div className="ratings">
                 <i className="fa-solid fa-star"></i>
@@ -664,10 +670,11 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
-          
+
             <div className="testimonial__card">
               <p className="testimonial__review">
-              Great team... Most of their calls are successful... Best place to learn stock market Trading... Wish they keep it going…
+                Great team... Most of their calls are successful... Best place
+                to learn stock market Trading... Wish they keep it going…
               </p>
               <div className="ratings">
                 <i className="fa-solid fa-star"></i>
@@ -683,11 +690,12 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
-          
 
             <div className="testimonial__card">
               <p className="testimonial__review">
-              One of the best Financial advising Teams. Working for the growth of people who really need support. Thanks to all Financial Ladder Team. Love from Pune ❤️
+                One of the best Financial advising Teams. Working for the growth
+                of people who really need support. Thanks to all Financial
+                Ladder Team. Love from Pune ❤️
               </p>
               <div className="ratings">
                 <i className="fa-solid fa-star"></i>

@@ -4,7 +4,8 @@ import "./refundPolicy.css";
 export default function RefundPolicy() {
   return (
     <div className="refund__policy_container">
-      <h3 style={{ textAlign: "center" }}>Refund Policy</h3><br/>
+      <h3 style={{ textAlign: "center" }}>Refund Policy</h3>
+      <br />
       <h6>
         Returns and Refunds Policy. Thank you for shopping at
         learn.thefinancialladder.com

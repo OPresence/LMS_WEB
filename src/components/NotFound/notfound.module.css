@@ -55,7 +55,7 @@
   right: 0;
 }
 .notfound a {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   display: inline-block;
   font-weight: 700;
   text-decoration: none;
@@ -63,7 +63,7 @@
   text-transform: uppercase;
   padding: 13px 23px;
   background: #676ffe;
-  border-radius: 5px;;
+  border-radius: 5px;
   font-size: 18px;
   -webkit-transition: 0.2s all;
   transition: 0.3s all;

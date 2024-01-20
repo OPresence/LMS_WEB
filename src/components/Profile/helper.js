@@ -9,6 +9,6 @@ export default function UpdateProfile(payload) {
 
   return client({ Authorization: `Bearer ${authToken}` }).put(
     API_ENDPOINT,
-    payload
+    payload,
   );
 }

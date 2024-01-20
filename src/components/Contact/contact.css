@@ -182,8 +182,10 @@
   border: 2px solid #fff !important;
   background-color: #17bf9e !important;
   transition: all 0.3s ease;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  box-shadow:
+    rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 @media all and (max-width: 767px) {

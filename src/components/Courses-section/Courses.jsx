@@ -50,7 +50,7 @@ const Courses = () => {
               <Col lg="4" md="6" sm="6">
                 <CourseCard key={item.id} course={item} />
               </Col>
-            ))
+            )),
           )}
         </Row>
       </Container>

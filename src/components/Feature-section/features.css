@@ -45,17 +45,15 @@
   transform: rotateY(180deg);
 }
 
-.single_feature_blue{
-  background-color: #3164F4;
+.single_feature_blue {
+  background-color: #3164f4;
   border-radius: 16px;
   color: black !important;
-
 }
-.single_feature_orange{
-  background-color: rgb(248,147,31);
+.single_feature_orange {
+  background-color: rgb(248, 147, 31);
   border-radius: 16px;
   color: black !important;
-
 }
 
 .single__feature__front,

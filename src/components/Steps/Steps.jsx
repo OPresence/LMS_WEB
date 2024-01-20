@@ -33,12 +33,12 @@ const Steps = () => {
             needs.
           </p>
         </div>
-        <div className="steps">  
-        <Link to="/contact">
-                <button className="step_header signup__btn">
-                  <span> Book your guidance session</span>
-                </button>
-              </Link>
+        <div className="steps">
+          <Link to="/contact">
+            <button className="step_header signup__btn">
+              <span> Book your guidance session</span>
+            </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -13,12 +13,11 @@
   padding: 3rem 3rem;
 }
 
-
 .refund__policy_container h6 {
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 14px;
-    text-align: justify;
-    letter-spacing: 2px;
-    
-    line-height: 1.5;
-  }
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  text-align: justify;
+  letter-spacing: 2px;
+
+  line-height: 1.5;
+}

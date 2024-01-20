@@ -112,7 +112,7 @@ export default function Cart() {
                         item={item}
                         removeItem={removeItem}
                       />
-                    ))
+                    )),
                   )}
               </div>
             </div>

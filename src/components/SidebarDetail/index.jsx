@@ -28,7 +28,7 @@ export default function SidebarDetail({ course }) {
 
   const removeItem = () => {
     const filteredCartItems = cartItems.filter(
-      (item) => item._id !== course._id
+      (item) => item._id !== course._id,
     );
     setCartItems(filteredCartItems);
   };

@@ -167,7 +167,9 @@
 }
 
 .user__menu__list li:hover {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
   transition: all 0.3s ease;
 }
 
@@ -189,7 +191,8 @@
   justify-content: center;
   background-color: #17bf9e !important;
   color: #ffffff !important;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
@@ -223,7 +226,8 @@
   top: 8px;
   right: -6px;
   z-index: 3;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+  box-shadow:
+    rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 

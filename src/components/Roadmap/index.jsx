@@ -54,7 +54,7 @@ export default function Roadmap() {
             {
               xPercent: -100 * i,
             },
-            (i - 1) * 0.5 + pauseRatio * i
+            (i - 1) * 0.5 + pauseRatio * i,
           );
         }
       });

@@ -73,7 +73,7 @@ export default function OrderHistory() {
                             <td>&#8377; {course?.[0]?.price}</td>
                           </tr>
                         );
-                      })
+                      }),
                     )}
                   </tbody>
                 </table>

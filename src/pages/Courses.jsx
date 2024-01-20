@@ -65,7 +65,7 @@ export default function Courses() {
           {React.Children.toArray(
             courseList.map((item) => (
               <CourseCard key={item._id} course={item} />
-            ))
+            )),
           )}
         </Col>
       </Row>
