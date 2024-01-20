@@ -49,6 +49,11 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "your-pre-commit-script.sh"
+    }
+  },
   "devDependencies": {
     "husky": "^8.0.3"
   }
